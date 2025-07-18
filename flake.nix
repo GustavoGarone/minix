@@ -12,6 +12,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nixcord.url = "github:kaylorben/nixcord";
   };
+
   outputs = {
     self,
     nixpkgs,
