@@ -11,6 +11,7 @@
     minvim.url = "github:GustavoGarone/minvim";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nixcord.url = "github:kaylorben/nixcord";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = {
@@ -21,6 +22,7 @@
     zen-browser,
     stylix,
     nixcord,
+    hyprland,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -40,6 +42,7 @@
       modules = [
         ./desktop/configuration.nix
         stylix.nixosModules.stylix
+        hyprland.nixosModules.default
         home-manager.nixosModules.home-manager
         {
           home-manager.extraSpecialArgs = {inherit inputs;};
@@ -50,6 +53,13 @@
             nixcord.homeModules.nixcord
             stylix.homeModules.stylix
             zen-browser.homeModules.beta
+            {
+              wayland.windowManager.hyprland = {
+                enable = true;
+                # package = null;
+                # portalPackage = null;
+              };
+            }
           ];
         }
       ];
