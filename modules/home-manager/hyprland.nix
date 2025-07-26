@@ -68,6 +68,7 @@
           "$mod SHIFT, s, exec, grimblast save area --freeze"
           "$mod, q, exec, kitty"
           "$mod, e, exec, dolphin"
+          "$mod, e, exec, kitty yazi"
           "$CTRL SHIFT, Escape, exec, kitty btop"
 
           "$mod, p, pseudo"
