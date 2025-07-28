@@ -8,8 +8,8 @@
       common.default = ["gtk"];
       hyprland.default = ["gtk" "hyprland"];
     };
-    configPackages = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
-    extraPortals = [pkgs.xdg-desktop-portal-gtk pkgs.xdg-desktop-portal-hyprland];
+    configPackages = [pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [pkgs.xdg-desktop-portal-gtk];
     # configPackages = [ pkgs.xdg-desktop-portal-gtk ];
     # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
