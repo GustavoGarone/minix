@@ -91,7 +91,7 @@ in {
 
   # Sessions variables
   environment.sessionVariables = {
-    # LD_LIBRARY_PATH = "${pkgs.gcc.cc.lib}/lib:$LD_LIBRARY_PATH";
+    LD_LIBRARY_PATH = "${pkgs.gcc.cc.lib}/lib:$LD_LIBRARY_PATH";
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
     __GL_GSYNC_ALLOWED = "0";
@@ -114,6 +114,8 @@ in {
     nix-prefetch-github
     git
     gh
+
+    gcc
 
     #xdg
     # xdg-utils
