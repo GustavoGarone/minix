@@ -7,8 +7,8 @@
   wayland.windowManager.hyprland = {
     # Tell NixOS to use system packages instead of home manager packes for portal
     # Compatibility
-    # package = null;
-    # portalPackage = null;
+    package = null;
+    portalPackage = null;
     enable = true;
     # catppuccin.enable = true;
     settings = {

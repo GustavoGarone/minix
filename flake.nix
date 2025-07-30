@@ -53,15 +53,15 @@
             nixcord.homeModules.nixcord
             stylix.homeModules.stylix
             zen-browser.homeModules.beta
-            {
-              wayland.windowManager.hyprland = {
-                enable = true;
-                package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-                portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-                # package = null;
-                # portalPackage = null;
-              };
-            }
+            # {
+            #   wayland.windowManager.hyprland = {
+            #     enable = true;
+            #     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+            #     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+            #     # package = null;
+            #     # portalPackage = null;
+            #   };
+            # }
           ];
         }
       ];

@@ -20,6 +20,7 @@
     XDG_SESSION_TYPE = "wayland";
     GDK_BACKEND = "wayland";
     MOZ_ENABLE_WAYLAND = "1";
+    NIXOS_OZONE_WL = "1";
   };
   # Cachix to not build Hyprland depedencies
   nix.settings = {
