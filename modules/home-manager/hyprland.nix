@@ -42,13 +42,14 @@
       windowrulev2 = "opacity 1 0.75, class:Zed|codium|tidal-hifi|kitty";
 
       monitor = [
-        "eDP-1, 1920x1080@120, -1920x0, 1.5"
+        "eDP-1, 1920x1080@120, -1920x0, 1"
         # "HDMI-A-1, 1920x1080@60, 0x0, 1"
         # ", preferred, auto-left, 1"
       ];
 
       exec-once = [
-        "waybar"
+        # "waybar"
+        # "hyprpanel"
         "hyprctl setcursor Bibata-Modern-Classic 16"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];

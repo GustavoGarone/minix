@@ -26,12 +26,13 @@ in {
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/kitty.nix
-    ../modules/home-manager/dunst.nix
     ../modules/home-manager/rofi.nix
     ../modules/home-manager/gammastep.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
     ../modules/home-manager/nixcord.nix
+    # ../modules/home-manager/dunst.nix
+    ../modules/home-manager/hyprpanel.nix
   ];
 
   home.username = "minze";
@@ -80,7 +81,7 @@ in {
     inkscape
     tomato-c
     gcal
-    drawing
+    krita
     loupe
     thunderbird
     obsidian
@@ -131,7 +132,7 @@ in {
     # linters ^
     # py packages
     gnumake
-    # texliveFull
+    texliveFull
     tex-fmt # Latex formatter in rust
 
     # For Fun
@@ -188,7 +189,7 @@ in {
   home.sessionVariables = {
     EDITOR = "nvim";
     QT_QPA_PLATFORM = "wayland;xcb";
-    # R_HOME = "${pkgs.R}/lib/R";
+    R_HOME = "${pkgs.R}/lib/R";
     # LD_LIBRARY_PATH = "${pkgs.R}/lib/R/lib:$LD_LIBRARY_PATH";
   };
 

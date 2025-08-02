@@ -102,11 +102,11 @@ in {
 
   environment.systemPackages = with pkgs; [
     wget
-    (
-      waybar.overrideAttrs (oldAttrs: {
-        mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
-      })
-    )
+    # (
+    #   waybar.overrideAttrs (oldAttrs: {
+    #     mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
+    #   })
+    # )
 
     extminvim
 
