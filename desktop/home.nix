@@ -32,7 +32,8 @@ in {
     ../modules/home-manager/zen-browser.nix
     ../modules/home-manager/nixcord.nix
     # ../modules/home-manager/dunst.nix
-    ../modules/home-manager/hyprpanel.nix
+    # ../modules/home-manager/hyprpanel.nix
+    ../modules/home-manager/minshell.nix
   ];
 
   home.username = "minze";

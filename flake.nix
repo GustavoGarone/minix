@@ -12,6 +12,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nixcord.url = "github:kaylorben/nixcord";
     hyprland.url = "github:hyprwm/Hyprland";
+    minshell.url = "github:GustavoGarone/minshell";
   };
 
   outputs = {
@@ -23,6 +24,7 @@
     stylix,
     nixcord,
     hyprland,
+    minshell,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -31,6 +33,9 @@
       overlays = [
         (final: prev: {
           neovim = minvim.packages.${system}.default;
+        })
+        (final: prev: {
+          quickshell = minshell.packages.${system}.default;
         })
       ];
     };
