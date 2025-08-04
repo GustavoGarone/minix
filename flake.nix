@@ -89,6 +89,7 @@
           # home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.minze = import ./laptop/home.nix;
+          home-manager.backupFileExtension = "bkphm";
           home-manager.sharedModules = [
             nixcord.homeModules.nixcord
             stylix.homeModules.stylix
