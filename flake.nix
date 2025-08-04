@@ -74,16 +74,27 @@
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ./laptop/configuration.nix
-        inputs.stylix.nixosModules.stylix
+        stylix.nixosModules.stylix
+        hyprland.nixosModules.default
         home-manager.nixosModules.home-manager
         {
+          home-manager.extraSpecialArgs = {inherit inputs;};
           # home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.minze = import ./laptop/home.nix;
           home-manager.sharedModules = [
-            inputs.nixcord.homeModules.nixcord
-            inputs.stylix.homeModules.stylix
+            nixcord.homeModules.nixcord
+            stylix.homeModules.stylix
+            zen-browser.homeModules.beta
+            # {
+            #   wayland.windowManager.hyprland = {
+            #     enable = true;
+            #     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+            #     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+            #     # package = null;
+            #     # portalPackage = null;
+            #   };
+            # }
           ];
         }
       ];
