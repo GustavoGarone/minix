@@ -12,40 +12,22 @@ in {
   imports = [
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ../modules/nixos/nvidia.nix
+    ../modules/nixos/intel.nix
+    # Probably not a good idea to use both!
+    ../modules/nixos/auto-cpufreq.nix
+    ../modules/nixos/tlp.nix
     ../modules/nixos/hyprland.nix
     ../modules/nixos/fish.nix
     ../modules/nixos/optimize.nix
     ../modules/nixos/ssh.nix
-    ../modules/nixos/steam.nix
     ../modules/nixos/fonts.nix
     ../modules/nixos/network.nix
   ];
-  # Use the systemd-boot EFI boot loader.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
+
   boot.loader = {
+    systemd-boot-enable = true;
     efi.canTouchEfiVariables = true;
-
-    systemd-boot = {
-      enable = true;
-
-      windows = {
-        "windows" = let
-          # To determine the name of the windows boot drive, boot into edk2 first, then run
-          # `map -c` to get drive aliases, and try out running `FS1:`, then `ls EFI` to check
-          # which alias corresponds to which EFI partition.
-          boot-drive = "FS2";
-        in {
-          title = "Windows";
-          efiDeviceHandle = boot-drive;
-          sortKey = "a_windows";
-        };
-      };
-
-      edk2-uefi-shell.enable = true;
-      edk2-uefi-shell.sortKey = "z_edk2";
-    };
+    kernelParams = ["i915.force_probe=46b3"];
   };
 
   systemd.services.mpd.environment = {
@@ -53,6 +35,7 @@ in {
   };
 
   programs.dconf.enable = true;
+  programs.nix-ld.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
@@ -140,8 +123,6 @@ in {
   # Virtualisation
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
-
-  services.logmein-hamachi.enable = true;
 
   # Stylix theming
   stylix = {
