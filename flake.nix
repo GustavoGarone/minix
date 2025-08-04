@@ -8,6 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    auto-cpufreq = {
+      url = "github:AdnanHodzic/auto-cpufreq";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     minvim.url = "github:GustavoGarone/minvim";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nixcord.url = "github:kaylorben/nixcord";
@@ -25,6 +29,7 @@
     nixcord,
     hyprland,
     minshell,
+    auto-cpufreq,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -78,6 +83,7 @@
         stylix.nixosModules.stylix
         hyprland.nixosModules.default
         home-manager.nixosModules.home-manager
+        auto-cpufreq.nixosModules.default
         {
           home-manager.extraSpecialArgs = {inherit inputs;};
           # home-manager.useGlobalPkgs = true;

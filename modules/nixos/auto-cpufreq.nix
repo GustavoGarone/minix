@@ -1,5 +1,5 @@
 {
-  programs.autocpufreq = {
+  programs.auto-cpufreq = {
     enable = true;
     settings = {
       charger = {

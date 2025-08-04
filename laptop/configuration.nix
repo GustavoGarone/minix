@@ -24,10 +24,12 @@ in {
     ../modules/nixos/network.nix
   ];
 
-  boot.loader = {
-    systemd-boot-enable = true;
-    efi.canTouchEfiVariables = true;
+  boot = {
     kernelParams = ["i915.force_probe=46b3"];
+    loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
   };
 
   systemd.services.mpd.environment = {
