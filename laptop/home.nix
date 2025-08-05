@@ -127,6 +127,7 @@ in {
     alejandra # Nix formatter
     # linters
     cpplint
+    sqruff # SQL in Rust
     hlint
     shellcheck
     vale
