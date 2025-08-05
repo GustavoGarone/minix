@@ -34,7 +34,6 @@ in {
     # ../modules/home-manager/hyprpanel.nix
     ../modules/home-manager/minshell.nix
     ../modules/home-manager/nixcord.nix
-    ../modules/home-manager/mysql.nix
   ];
 
   home.username = "minze";

@@ -22,6 +22,7 @@ in {
     ../modules/nixos/ssh.nix
     ../modules/nixos/fonts.nix
     ../modules/nixos/network.nix
+    ../modules/home-manager/mysql.nix
   ];
 
   boot = {
