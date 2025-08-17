@@ -21,14 +21,10 @@
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/C0ED-4034";
       fsType = "vfat";
+      options = [ "fmask=0022" "dmask=0022" ];
     };
 
-  swapDevices = [ { 
-    device = "/var/lib/swapfile";
-    size = 16*1024;
-  } ];
-
-
+  swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's
@@ -39,6 +35,4 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  
-  boot.kernel.sysctl = { "vm.swappiness" = 10;};
 }

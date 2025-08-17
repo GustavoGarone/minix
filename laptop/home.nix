@@ -30,10 +30,10 @@ in {
     ../modules/home-manager/gammastep.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
-    ../modules/home-manager/nixcord.nix
     # ../modules/home-manager/dunst.nix
     # ../modules/home-manager/hyprpanel.nix
     ../modules/home-manager/minshell.nix
+    ../modules/home-manager/nixcord.nix
   ];
 
   home.username = "minze";
@@ -52,6 +52,7 @@ in {
   home.packages = with pkgs; [
     # "OS" Packages
     yazi
+    powertop
     # rofi-wayland plugins. Rest of rofi defined in module
     # See https://discourse.nixos.org/t/rofi-emoji-plugin-instructions-dont-work-need-help/49696/4
     rofi-power-menu
@@ -126,6 +127,7 @@ in {
     alejandra # Nix formatter
     # linters
     cpplint
+    sqruff # SQL in Rust
     hlint
     shellcheck
     vale
@@ -138,7 +140,6 @@ in {
 
     # For Fun
     nethack
-    steam-run
     (lutris.override {
       extraLibraries = pkgs: [
         # Extra packages for lutris dependencies
