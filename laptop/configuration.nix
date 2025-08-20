@@ -81,7 +81,7 @@ in {
 
   # Sessions variables
   environment.sessionVariables = {
-    # LD_LIBRARY_PATH = "${pkgs.gcc.cc.lib}/lib:${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH";
+    LD_LIBRARY_PATH = "${pkgs.gcc.cc.lib}/lib:${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH";
     # LD_LIBRARY_PATH = "${pkgs.gfortran.cc.lib}/lib";
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";

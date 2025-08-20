@@ -192,7 +192,7 @@ in {
     EDITOR = "nvim";
     QT_QPA_PLATFORM = "wayland;xcb";
     R_HOME = "${pkgs.R}/lib/R";
-    # LD_LIBRARY_PATH = "${pkgs.R}/lib/R/lib:$LD_LIBRARY_PATH";
+    LD_LIBRARY_PATH = "${pkgs.R}/lib/R/lib:$LD_LIBRARY_PATH";
   };
 
   # Let Home Manager install and manage itself.
