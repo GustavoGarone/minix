@@ -115,6 +115,7 @@ in {
     (python313.withPackages (ppkgs: [
       ppkgs.pynvim
       ppkgs.flake8
+      ppkgs.scipy
       ppkgs.black
       ppkgs.mdformat
       ppkgs.isort
@@ -140,6 +141,7 @@ in {
 
     # For Fun
     nethack
+    steam
     (lutris.override {
       extraLibraries = pkgs: [
         # Extra packages for lutris dependencies
@@ -192,7 +194,7 @@ in {
     EDITOR = "nvim";
     QT_QPA_PLATFORM = "wayland;xcb";
     R_HOME = "${pkgs.R}/lib/R";
-    LD_LIBRARY_PATH = "${pkgs.R}/lib/R/lib:$LD_LIBRARY_PATH";
+    # LD_LIBRARY_PATH = "${pkgs.R}/lib/R/lib:$LD_LIBRARY_PATH";
   };
 
   # Let Home Manager install and manage itself.

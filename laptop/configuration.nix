@@ -14,12 +14,13 @@ in {
     ./hardware-configuration.nix
     ../modules/nixos/intel.nix
     # Probably not a good idea to use both!
-    ../modules/nixos/auto-cpufreq.nix
+    # ../modules/nixos/auto-cpufreq.nix
     ../modules/nixos/tlp.nix
     ../modules/nixos/hyprland.nix
     ../modules/nixos/fish.nix
     ../modules/nixos/optimize.nix
     ../modules/nixos/ssh.nix
+    ../modules/nixos/steam.nix
     ../modules/nixos/fonts.nix
     ../modules/nixos/network.nix
     ../modules/nixos/mysql.nix
@@ -81,7 +82,7 @@ in {
 
   # Sessions variables
   environment.sessionVariables = {
-    LD_LIBRARY_PATH = "${pkgs.gcc.cc.lib}/lib:${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH";
+    # LD_LIBRARY_PATH = "${pkgs.gcc.cc.lib}/lib:${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH";
     # LD_LIBRARY_PATH = "${pkgs.gfortran.cc.lib}/lib";
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";

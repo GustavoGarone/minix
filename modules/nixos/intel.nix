@@ -6,4 +6,5 @@
       vpl-gpu-rt
     ];
   };
+  boot.kernelParams = ["i915.force_probe=46b3"];
 }

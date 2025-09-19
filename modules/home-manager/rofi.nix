@@ -1,10 +1,10 @@
 {pkgs, ...}: {
   programs.rofi = {
     enable = true;
-    package = pkgs.rofi-wayland;
+    package = pkgs.rofi;
     # Currently not working due to lag-behind of rofi-wayland
     plugins = [
-      pkgs.rofi-emoji-wayland
+      pkgs.rofi-emoji
       # pkgs.rofi-power-menu
       # pkgs.rofi-calc
     ];

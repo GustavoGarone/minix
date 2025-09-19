@@ -14,10 +14,10 @@
   ];
   programs.fish = {
     enable = true;
+    # ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
       zoxide init fish | source # config for zoxide
-      ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
     '';
     plugins = [
       {
