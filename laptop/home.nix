@@ -23,6 +23,7 @@ in {
   # manager
   imports = [
     ../modules/home-manager/hyprland.nix
+    ../modules/home-manager/improvs.nix
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/kitty.nix
