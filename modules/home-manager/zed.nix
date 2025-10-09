@@ -119,4 +119,7 @@
       base_keymap = "VSCode";
     };
   };
+  home.sessionPath = [
+    "${pkgs.zed-editor}/bin"
+  ];
 }

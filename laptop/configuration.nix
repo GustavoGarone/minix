@@ -23,7 +23,8 @@ in {
     ../modules/nixos/steam.nix
     ../modules/nixos/fonts.nix
     ../modules/nixos/network.nix
-    ../modules/nixos/mysql.nix
+    # ../modules/nixos/mysql.nix
+    ../modules/nixos/postgresql.nix
   ];
 
   boot = {

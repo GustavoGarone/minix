@@ -13,10 +13,15 @@
       knitr
       rmarkdown
       quarto
-      # ggtikz
-      # tikzDevice
       styler
+      IRkernel
     ];
+  };
+  ark = pkgs.fetchFromGitHub {
+    owner = "posit-dev";
+    repo = "ark";
+    rev = "latest";
+    sha256 = "sha256-hRfB/AvRUWJfO96kESbU+jyCc+zl/5NB870STOGRF9k=";
   };
 in {
   # Home Manager needs a bit of information about you and the paths it should
@@ -114,6 +119,8 @@ in {
     quarto
     librsvg # converting plots to pdf
     julia
+    xeus # jupyteR kernel
+    ark # idem
     (python313.withPackages (ppkgs: [
       ppkgs.pynvim
       ppkgs.flake8
@@ -121,9 +128,7 @@ in {
       ppkgs.black
       ppkgs.mdformat
       ppkgs.isort
-      ppkgs.jupyter
       ppkgs.ipykernel
-      ppkgs.jupyter-cache
     ]))
     RwPkgs
     nil # Nix LS

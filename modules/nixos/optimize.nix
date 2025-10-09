@@ -9,6 +9,9 @@
   # Zram swap
   zramSwap.enable = true;
 
+  # Enable Direnv
+  programs.direnv.enable = true;
+
   # thermald overheating protection
   services.thermald.enable = true;
 

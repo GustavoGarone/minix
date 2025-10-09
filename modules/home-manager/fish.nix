@@ -18,6 +18,7 @@
     interactiveShellInit = ''
       set fish_greeting # Disable greeting
       zoxide init fish | source # config for zoxide
+      direnv hook fish | source # Direnv shell hook
     '';
     plugins = [
       {
