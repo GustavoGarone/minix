@@ -38,7 +38,7 @@
       # };
 
       file_types = {
-        markdown = ["qmd"];
+        Markdown = ["qmd"];
       };
 
       telemetry.metrics = false;
