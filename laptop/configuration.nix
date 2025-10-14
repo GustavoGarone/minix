@@ -6,7 +6,7 @@
 }: let
   inherit (pkgs.stdenv.hostPlatform) system;
   nixvim-package = inputs.minvim.packages.${system}.default;
-  extminvim = nixvim-package.extend config.lib.stylix.nixvim.config;
+  extminvim = nixvim-package.extend config.stylix.targets.nixvim.exportedModule;
 in {
   nixpkgs.config.allowUnfree = true;
   imports = [

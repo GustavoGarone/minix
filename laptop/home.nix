@@ -37,6 +37,7 @@ in {
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
     ../modules/home-manager/zed.nix
+    ../modules/home-manager/codium.nix
     # ../modules/home-manager/dunst.nix
     # ../modules/home-manager/hyprpanel.nix
     ../modules/home-manager/minshell.nix
@@ -118,7 +119,7 @@ in {
     # Neovim # Defined in stylix.nix for stylix support
     quarto
     librsvg # converting plots to pdf
-    julia
+    julia-bin
     xeus # jupyteR kernel
     ark # idem
     (python313.withPackages (ppkgs: [
