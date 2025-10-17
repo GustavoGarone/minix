@@ -16,7 +16,10 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nixcord.url = "github:kaylorben/nixcord";
     hyprland.url = "github:hyprwm/Hyprland";
-    minshell.url = "github:GustavoGarone/minshell";
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -28,8 +31,8 @@
     stylix,
     nixcord,
     hyprland,
-    minshell,
     auto-cpufreq,
+    caelestia-shell,
     ...
   } @ inputs: let
     system = "x86_64-linux";
@@ -38,9 +41,6 @@
       overlays = [
         (final: prev: {
           neovim = minvim.packages.${system}.default;
-        })
-        (final: prev: {
-          quickshell = minshell.packages.${system}.default;
         })
       ];
     };
@@ -63,6 +63,7 @@
             nixcord.homeModules.nixcord
             stylix.homeModules.stylix
             zen-browser.homeModules.beta
+            caelestia-shell.homeManagerModules.default
             # {
             #   wayland.windowManager.hyprland = {
             #     enable = true;
@@ -94,6 +95,7 @@
             nixcord.homeModules.nixcord
             stylix.homeModules.stylix
             zen-browser.homeModules.beta
+            caelestia-shell.homeManagerModules.default
             # {
             #   wayland.windowManager.hyprland = {
             #     enable = true;
