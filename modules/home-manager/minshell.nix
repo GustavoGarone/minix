@@ -11,5 +11,11 @@
       };
       paths.wallpaperDir = "~/Pictures/Wallpapers/";
     };
+    cli = {
+      enable = true; # Also add caelestia-cli to path
+      settings = {
+        theme.enableGtk = false;
+      };
+    };
   };
 }
