@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  home.packages = with pkgs; [
+    gpu-screen-recorder
+  ];
+
   programs.caelestia = {
     enable = true;
     systemd = {

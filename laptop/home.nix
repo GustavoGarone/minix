@@ -84,6 +84,9 @@ in {
     delta
     qt6Packages.qtwayland
     qt6.qtwayland
+    qt5.qtwayland
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qt5.qtwayland
 
     # General Software
     qbittorrent
