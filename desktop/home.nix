@@ -110,7 +110,7 @@ in {
     # Neovim # Defined in stylix.nix for stylix support
     quarto
     librsvg # converting plots to pdf
-    julia
+    julia-bin
     (python313.withPackages (ppkgs: [
       ppkgs.pynvim
       ppkgs.flake8

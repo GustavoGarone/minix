@@ -72,7 +72,6 @@
           "$CTRL SHIFT, Escape, exec, kitty btop"
 
           "$mod, p, pseudo"
-          "$mod, j, togglesplit"
           "$mod, c, killactive"
           "$mod, r, togglesplit"
           "$mod, t, togglefloating"
