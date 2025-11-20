@@ -104,7 +104,7 @@
     #   })
     # )
 
-    nvim
+    neovim
     # Git
     nix-prefetch-github
     git

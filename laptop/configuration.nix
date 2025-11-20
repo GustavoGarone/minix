@@ -96,7 +96,7 @@
     #     mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
     #   })
     # )
-    nvim
+    neovim
     # Git
     nix-prefetch-github
     git
