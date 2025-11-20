@@ -1,6 +1,6 @@
 {inputs, ...}: {
   programs.nixcord = {
-    enable = true; # enable Nixcord. Also installs discord package
+    enable = false; # enable Nixcord. Also installs discord package
     vesktop.enable = true;
     config = {
       # frameless = true; # set some Vencord options
@@ -13,5 +13,8 @@
         youtubeAdblock.enable = true;
       };
     };
+  };
+  programs.vesktop = {
+    enable = true;
   };
 }
