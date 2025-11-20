@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   fonts.packages = with pkgs; [
-    vistafonts
+    vista-fonts
     nerd-fonts.symbols-only
     nerd-fonts.jetbrains-mono
     texlivePackages.nunito
