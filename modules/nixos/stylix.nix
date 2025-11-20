@@ -1,4 +1,16 @@
-{pkgs, ...}: {
+{
+  inputs,
+  pkgs,
+  config,
+  lib,
+  ...
+}: let
+  inherit (pkgs.stdenv.hostPlatform) system;
+  nixvim-package = inputs.minvim.packages.${system}.default;
+  extminvim =
+    nixvim-package.extend
+    config.stylix.targets.nixvim.exportedModule;
+in {
   # Stylix theming
   stylix = {
     enable = true;
@@ -8,10 +20,8 @@
     # polarity = "dark";
     homeManagerIntegration.autoImport = false;
     homeManagerIntegration.followSystem = true;
-    targets = {
-      zen-browser = {
-        profileNames = ["garonegustavo@gmail.com"];
-      };
-    };
   };
+  environment.systemPackages = with pkgs; [
+    extminvim
+  ];
 }

@@ -1,13 +1,8 @@
 {
   config,
   pkgs,
-  inputs,
   ...
-}: let
-  inherit (pkgs.stdenv.hostPlatform) system;
-  nixvim-package = inputs.minvim.packages.${system}.default;
-  extminvim = nixvim-package.extend config.stylix.targets.nixvim.exportedModule;
-in {
+}: {
   nixpkgs.config.allowUnfree = true;
   imports = [
     # Include the results of the hardware scan.
@@ -101,9 +96,7 @@ in {
     #     mesonFlags = oldAttrs.mesonFlags ++ ["-Dexperimental=true"];
     #   })
     # )
-
-    extminvim
-
+    nvim
     # Git
     nix-prefetch-github
     git

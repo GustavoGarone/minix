@@ -734,11 +734,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1763653635,
-        "narHash": "sha256-SvJ3f5vkrGY5v4K9KYakfXhwZ6aEOXw2KXQWJ3/3U0Q=",
+        "lastModified": 1763654681,
+        "narHash": "sha256-13ZafoHd48ZLJnlmH/4QxYz6uFf33Hub4GidizA9Hko=",
         "owner": "GustavoGarone",
         "repo": "minvim",
-        "rev": "fa400fa19afd81bafdfae3e77c0b8501b2891c29",
+        "rev": "04524cc4a2192f9295157edbebc0fc63bac7340d",
         "type": "github"
       },
       "original": {

@@ -27,9 +27,14 @@ in {
       dark = "Papirus-Dark";
       light = "Papirus-Light";
     };
-    targets.hyprland = {
-      enable = true;
-      hyprpaper.enable = false;
+    targets = {
+      hyprland = {
+        enable = true;
+        hyprpaper.enable = false;
+      };
+      zen-browser = {
+        profileNames = ["garonegustavo@gmail.com"];
+      };
     };
   };
 
