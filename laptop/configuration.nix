@@ -25,6 +25,7 @@ in {
     ../modules/nixos/network.nix
     # ../modules/nixos/mysql.nix
     ../modules/nixos/postgresql.nix
+    ../modules/nixos/stylix.nix
   ];
 
   boot = {
@@ -136,17 +137,6 @@ in {
   # Virtualisation
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
-
-  # Stylix theming
-  stylix = {
-    enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
-    autoEnable = true;
-    # image = ~/wallpapers/nitwcitynight.jpg;
-    # polarity = "dark";
-    homeManagerIntegration.autoImport = false;
-    homeManagerIntegration.followSystem = true;
-  };
 
   # ZSH Shell
   # programs.zsh.enable = true;

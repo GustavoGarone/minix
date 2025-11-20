@@ -20,6 +20,7 @@ in {
     ../modules/nixos/steam.nix
     ../modules/nixos/fonts.nix
     ../modules/nixos/network.nix
+    ../modules/nixos/stylix.nix
   ];
   # Use the systemd-boot EFI boot loader.
   # boot.loader.systemd-boot.enable = true;
@@ -142,17 +143,6 @@ in {
   programs.virt-manager.enable = true;
 
   services.logmein-hamachi.enable = true;
-
-  # Stylix theming
-  stylix = {
-    enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
-    autoEnable = true;
-    # image = ~/wallpapers/nitwcitynight.jpg;
-    # polarity = "dark";
-    homeManagerIntegration.autoImport = false;
-    homeManagerIntegration.followSystem = true;
-  };
 
   # ZSH Shell
   # programs.zsh.enable = true;
