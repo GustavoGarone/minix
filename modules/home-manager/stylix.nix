@@ -33,7 +33,8 @@ in {
         hyprpaper.enable = false;
       };
       zen-browser = {
-        profileNames = ["garonegustavo@gmail.com"];
+        enable = false;
+        # profileNames = ["garonegustavo@gmail.com"];
       };
     };
   };

@@ -20,7 +20,6 @@
         gaps_out = 1;
         border_size = 1;
         layout = "dwindle";
-        no_border_on_floating = "yes";
 
         # "col.active_border" = "rgb(579C79)";
         # "col.inactive_border" = "rgb(362419)";
@@ -39,7 +38,7 @@
       };
       animations.enabled = "yes";
 
-      windowrulev2 = "opacity 1 0.75, class:Zed|codium|tidal-hifi|kitty";
+      windowrule = "border_size 0, match:float 1";
 
       monitor = [
         "eDP-1, 1920x1080@120, -1920x0, 1"
