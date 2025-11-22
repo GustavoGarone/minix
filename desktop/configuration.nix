@@ -16,6 +16,7 @@
     ../modules/nixos/fonts.nix
     ../modules/nixos/network.nix
     ../modules/nixos/stylix.nix
+    ../modules/nixos/postgresql.nix
   ];
   # Use the systemd-boot EFI boot loader.
   # boot.loader.systemd-boot.enable = true;

@@ -19,6 +19,7 @@
     caelestia-shell = {
       url = "github:caelestia-dots/shell";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell?ref=master"; # <--- This line is the fix.
     };
   };
 

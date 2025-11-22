@@ -27,7 +27,7 @@ in {
     ../modules/home-manager/git.nix
     ../modules/home-manager/kitty.nix
     ../modules/home-manager/rofi.nix
-    ../modules/home-manager/gammastep.nix
+    # ../modules/home-manager/gammastep.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
     ../modules/home-manager/nixcord.nix
