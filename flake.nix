@@ -21,6 +21,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell?ref=master"; # <--- This line is the fix.
     };
+    tidaLuna.url = "github:Inrixia/TidaLuna";
   };
 
   outputs = {
@@ -34,6 +35,7 @@
     hyprland,
     auto-cpufreq,
     caelestia-shell,
+    tidaLuna,
     ...
   } @ inputs: let
     system = "x86_64-linux";

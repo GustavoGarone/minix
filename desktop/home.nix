@@ -34,6 +34,7 @@ in {
     # ../modules/home-manager/dunst.nix
     # ../modules/home-manager/hyprpanel.nix
     ../modules/home-manager/minshell.nix
+    ../modules/home-manager/tidal.nix
   ];
 
   home.username = "minze";
@@ -110,6 +111,7 @@ in {
     # Neovim # Defined in stylix.nix for stylix support
     quarto
     librsvg # converting plots to pdf
+    pgformatter
     julia-bin
     (python313.withPackages (ppkgs: [
       ppkgs.pynvim
