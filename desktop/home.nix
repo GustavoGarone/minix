@@ -35,6 +35,7 @@ in {
     # ../modules/home-manager/hyprpanel.nix
     ../modules/home-manager/minshell.nix
     ../modules/home-manager/tidal.nix
+    ../modules/home-manager/helix.nix
   ];
 
   home.username = "minze";
@@ -74,6 +75,8 @@ in {
     zoxide
     bat
     delta
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qt5.qtwayland
     qt6Packages.qtwayland
     qt6.qtwayland
 
@@ -147,7 +150,6 @@ in {
         # Extra packages for lutris dependencies
       ];
     })
-    tidal-hifi
     wineWowPackages.waylandFull
     cbonsai
     cmatrix
@@ -196,6 +198,10 @@ in {
     R_HOME = "${pkgs.R}/lib/R";
     # LD_LIBRARY_PATH = "${pkgs.R}/lib/R/lib:$LD_LIBRARY_PATH";
   };
+
+  home.sessionPath = [
+    "home/minze/.julia/bin"
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
