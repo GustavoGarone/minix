@@ -36,6 +36,7 @@ in {
     ../modules/home-manager/minshell.nix
     ../modules/home-manager/tidal.nix
     ../modules/home-manager/helix.nix
+    ../modules/home-manager/go.nix
   ];
 
   home.username = "minze";
