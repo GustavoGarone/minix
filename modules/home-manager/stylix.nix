@@ -15,6 +15,7 @@ in {
     enable = true;
     # image = ~/wallpapers/nitwcitynight.jpg;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/harmonic16-light.yaml";
     # polarity = "dark";
     cursor = {
       package = pkgs.bibata-cursors;

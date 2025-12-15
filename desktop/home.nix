@@ -4,21 +4,8 @@
   config,
   pkgs,
   ...
-}: let
+}: {
   # Custom R Packages
-  RwPkgs = pkgs.rWrapper.override {
-    packages = with pkgs.rPackages; [
-      languageserver
-      ggplot2
-      knitr
-      rmarkdown
-      quarto
-      # ggtikz
-      # tikzDevice
-      styler
-    ];
-  };
-in {
   # Home Manager needs a bit of information about you and the paths it should
   # manager
   imports = [
@@ -37,6 +24,8 @@ in {
     ../modules/home-manager/tidal.nix
     ../modules/home-manager/helix.nix
     ../modules/home-manager/go.nix
+    ../modules/home-manager/R.nix
+    ../modules/home-manager/sciediting.nix
   ];
 
   home.username = "minze";
@@ -117,6 +106,7 @@ in {
     librsvg # converting plots to pdf
     pgformatter
     julia-bin
+    marksman # Markdown language server
     (python313.withPackages (ppkgs: [
       ppkgs.pynvim
       ppkgs.flake8
@@ -127,7 +117,6 @@ in {
       ppkgs.ipykernel
       ppkgs.jupyter-cache
     ]))
-    RwPkgs
     nil # Nix LS
     alejandra # Nix formatter
     # linters
@@ -139,9 +128,6 @@ in {
     # linters ^
     # py packages
     gnumake
-    texliveFull
-    tex-fmt # Latex formatter in rust
-    poppler-utils # For converting pdf to svg (pgfxplots)
 
     # For Fun
     nethack

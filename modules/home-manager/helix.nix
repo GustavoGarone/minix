@@ -68,16 +68,38 @@
         formatter.args = ["--style=sciml"];
       }
       {
+        name = "r";
+        language-servers = ["air" "r"];
+        auto-format = true;
+      }
+      {
         name = "nix";
         auto-format = true;
         formatter.command = "${pkgs.alejandra}/bin/alejandra";
       }
+      {
+        name = "quarto";
+        auto-format = true;
+        language-servers = ["marksman"];
+        # formatter.command = "mdformat"; # It sucks!
+        # formatter.args = ["-"];
+      }
+      {
+        name = "markdown";
+        auto-format = true;
+        # formatter.command = "mdformat";
+        # formatter.args = ["-"];
+      }
     ];
-    # languages.language-server = {
-    #   jetls = {
-    #     command = "jetls";
-    #     args = ["--threads=auto" "--"];
-    #   };
-    # };
+    languages.language-server = {
+      #   jetls = {
+      #     command = "jetls";
+      #     args = ["--threads=auto" "--"];
+      #   };
+      air = {
+        command = "air";
+        args = ["language-server"];
+      };
+    };
   };
 }
