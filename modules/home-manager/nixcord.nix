@@ -1,4 +1,4 @@
-{inputs, ...}: {
+{pkgs, ...}: {
   programs.nixcord = {
     enable = true; # enable Nixcord. Also installs discord package
     vesktop.enable = true;
@@ -17,4 +17,7 @@
   programs.vesktop = {
     enable = false;
   };
+  home.packages = with pkgs; [
+    legcord
+  ];
 }
