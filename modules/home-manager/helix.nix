@@ -31,12 +31,28 @@
         };
         statusline = {
           left = [
-            "mode"
             "spinner"
+            "mode"
+            "separator"
+            "spacer"
             "version-control"
+          ];
+          center = [
+            "read-only-indicator"
+            "file-modification-indicator"
             "file-name"
+            "diagnostics"
+          ];
+          right = [
+            "file-type"
+            "separator"
+            "selections"
+            "register"
+            "position"
+            "file-encoding"
           ];
         };
+        file-picker.hidden = false;
       };
       keys = {
         normal = {

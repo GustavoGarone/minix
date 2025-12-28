@@ -16,7 +16,7 @@ in {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/chalk.yaml";
     autoEnable = true;
-    # image = ~/wallpapers/nitwcitynight.jpg;
+    # image = ../../wallpapers/maecatwalk.png;
     # polarity = "dark";
     homeManagerIntegration.autoImport = false;
     homeManagerIntegration.followSystem = true;

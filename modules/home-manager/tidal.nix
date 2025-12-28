@@ -4,6 +4,7 @@
   ...
 }: {
   home.packages = with pkgs; [
-    inputs.tidaLuna.packages.${system}.default
+    # inputs.tidaLuna.packages.${system}.default
+    tidal-hifi
   ];
 }

@@ -22,27 +22,30 @@
   # boot.loader.systemd-boot.enable = true;
   # boot.loader.efi.canTouchEfiVariables = true;
   boot.loader = {
-    efi.canTouchEfiVariables = true;
+    #    efi.canTouchEfiVariables = true;
+    grub.enable = true;
+    grub.device = "/dev/sda";
+    grub.useOSProber = true;
 
-    systemd-boot = {
-      enable = true;
+    # systemd-boot = {
+    #  enable = true;
 
-      windows = {
-        "windows" = let
-          # To determine the name of the windows boot drive, boot into edk2 first, then run
-          # `map -c` to get drive aliases, and try out running `FS1:`, then `ls EFI` to check
-          # which alias corresponds to which EFI partition.
-          boot-drive = "FS2";
-        in {
-          title = "Windows";
-          efiDeviceHandle = boot-drive;
-          sortKey = "a_windows";
-        };
-      };
+    #      windows = {
+    #       "windows" = let
+    # To determine the name of the windows boot drive, boot into edk2 first, then run
+    # `map -c` to get drive aliases, and try out running `FS1:`, then `ls EFI` to check
+    # which alias corresponds to which EFI partition.
+    #        boot-drive = "FS2";
+    #     in {
+    #      title = "Windows";
+    #     efiDeviceHandle = boot-drive;
+    #    sortKey = "a_windows";
+    # };
+    # };
 
-      edk2-uefi-shell.enable = true;
-      edk2-uefi-shell.sortKey = "z_edk2";
-    };
+    # edk2-uefi-shell.enable = true;
+    # edk2-uefi-shell.sortKey = "z_edk2";
+    # };
   };
 
   systemd.services.mpd.environment = {
@@ -82,7 +85,7 @@
   users.users.minze = {
     isNormalUser = true;
     description = "minze";
-    extraGroups = ["networkmanager" "wheel" "docker" "libvirtd"];
+    extraGroups = ["networkmanager" "wheel" "docker" "libvirtd" "gamemode"];
     packages = with pkgs; [];
   };
 
@@ -131,6 +134,8 @@
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
+    alsa.enable = true;
+    jack.enable = true;
   };
 
   # Virtualisation
@@ -185,5 +190,5 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "23.11"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
 }
