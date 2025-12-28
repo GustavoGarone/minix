@@ -6,17 +6,6 @@
   ...
 }: let
   # Custom R Packages
-  RwPkgs = pkgs.rWrapper.override {
-    packages = with pkgs.rPackages; [
-      languageserver
-      ggplot2
-      knitr
-      rmarkdown
-      quarto
-      styler
-      IRkernel
-    ];
-  };
   ark = pkgs.fetchFromGitHub {
     owner = "posit-dev";
     repo = "ark";
@@ -36,11 +25,14 @@ in {
     ../modules/home-manager/gammastep.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
-    ../modules/home-manager/zed.nix
-    ../modules/home-manager/codium.nix
+    ../modules/home-manager/helix.nix
+    ../modules/home-manager/R.nix
+    ../modules/home-manager/go.nix
+    ../modules/home-manager/sciediting.nix
     # ../modules/home-manager/dunst.nix
     # ../modules/home-manager/hyprpanel.nix
-    ../modules/home-manager/minshell.nix
+    # ../modules/home-manager/minshell.nix
+    ../modules/home-manager/waybar.nix
     ../modules/home-manager/nixcord.nix
   ];
 
@@ -134,7 +126,6 @@ in {
       ppkgs.isort
       ppkgs.ipykernel
     ]))
-    RwPkgs
     nil # Nix LS
     alejandra # Nix formatter
     # linters

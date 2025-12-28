@@ -53,6 +53,7 @@
   };
 
   programs.dconf.enable = true;
+  powerManagement.cpuFreqGovernor = "performance";
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
