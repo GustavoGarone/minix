@@ -37,6 +37,9 @@ in {
         enable = false;
         # profileNames = ["garonegustavo@gmail.com"];
       };
+      waybar = {
+        # enable = false;
+      };
     };
   };
 
