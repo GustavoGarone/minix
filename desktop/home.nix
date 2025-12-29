@@ -19,7 +19,8 @@
     ../modules/home-manager/nixcord.nix
     # ../modules/home-manager/dunst.nix
     # ../modules/home-manager/hyprpanel.nix
-    ../modules/home-manager/minshell.nix
+    # ../modules/home-manager/minshell.nix
+    ../modules/home-manager/waybar.nix
     ../modules/home-manager/tidal.nix
     ../modules/home-manager/helix.nix
     ../modules/home-manager/go.nix

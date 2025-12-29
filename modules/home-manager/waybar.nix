@@ -1,20 +1,26 @@
-{...}: {
+{pkgs, ...}: {
+  home.packages = with pkgs; [
+    playerctl
+  ];
   programs.waybar = {
     enable = true;
     settings = {
       main = {
-        layer = "top";
+        layer = "bottom";
         position = "top";
         height = 30;
         modules-left = [
-          # "custom/os"
+          "custom/os"
           "hyprland/workspaces"
         ];
         modules-center = [
           "clock"
         ];
         modules-right = [
+          "mpris"
+          "tray"
           "network"
+          "pulseaudio"
           "battery"
         ];
 
@@ -40,13 +46,40 @@
           };
         };
 
+        "mpris" = {
+          format = "{artist} {player_icon} {title}";
+          format-paused = "{artist} {status_icon} {title}";
+          interval = 1;
+          player-icons = {
+            chromium = "󰼮 ";
+            firefox = " ";
+            default = " ";
+          };
+          status-icons = {
+            playing = " ";
+            paused = " ";
+            stopped = " ";
+          };
+        };
+
+        "network" = {
+          format-wifi = "  ";
+          format-ethernet = "󰈀 ";
+        };
+
+        "pulseaudio" = {
+          format = "󰕾  {volume}%";
+          format-muted = "󰸈 ";
+        };
+
         # Custom modules
         "custom/os" = {
-          "format" = "";
+          "format" = "🍃";
         };
       };
     };
 
+    # CSS
     style =
       # css
       ''
@@ -58,6 +91,22 @@
 
         .modules-center {
           background-color: rgba(0,0,0,0);
+        }
+
+        .modules-right {
+          padding: 0px 2px;
+        }
+
+        #clock {
+          font-weight: bold;
+        }
+
+        #network.disconnected {
+          opacity: 0.5
+        }
+
+        .modules-right > * > * {
+          margin: 0px 5px;
         }
 
       '';
