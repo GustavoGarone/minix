@@ -59,9 +59,9 @@
       ];
       bind =
         [
-          "$mod, a, exec, rofi -show drun -show-icons"
-          "$mod, x, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
-          "$mod, i, exec, rofi -show emoji -modi emoji"
+          "$mod, a, exec, wofi --show drun --show-icons"
+          # "$mod, x, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
+          # "$mod, i, exec, rofi -show emoji -modi emoji"
           "$mod SHIFT, M, exec, pkill Hyprland"
           "$mod SHIFT, l, exec, hyprlock"
           "$mod, s, exec, grimblast copy area --freeze"

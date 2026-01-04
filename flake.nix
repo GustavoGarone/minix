@@ -2,7 +2,7 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs";
     stylix.url = "github:danth/stylix";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -16,11 +16,6 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nixcord.url = "github:kaylorben/nixcord";
     hyprland.url = "github:hyprwm/Hyprland";
-    caelestia-shell = {
-      url = "github:caelestia-dots/shell";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.quickshell.url = "git+https://git.outfoxxed.me/outfoxxed/quickshell?ref=master"; # <--- This line is the fix.
-    };
     tidaLuna.url = "github:Inrixia/TidaLuna";
   };
 
@@ -34,7 +29,6 @@
     nixcord,
     hyprland,
     auto-cpufreq,
-    caelestia-shell,
     tidaLuna,
     ...
   } @ inputs: let
@@ -67,7 +61,6 @@
             nixcord.homeModules.nixcord
             stylix.homeModules.stylix
             zen-browser.homeModules.beta
-            caelestia-shell.homeManagerModules.default
             # {
             #   wayland.windowManager.hyprland = {
             #     enable = true;
@@ -99,7 +92,6 @@
             nixcord.homeModules.nixcord
             stylix.homeModules.stylix
             zen-browser.homeModules.beta
-            caelestia-shell.homeManagerModules.default
             # {
             #   wayland.windowManager.hyprland = {
             #     enable = true;

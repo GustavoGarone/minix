@@ -79,6 +79,8 @@
     variant = "";
   };
 
+  programs.nix-ld.enable = true;
+
   # Configure console keymap
   console.keyMap = "br-abnt2";
 

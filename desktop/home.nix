@@ -12,20 +12,23 @@
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/kitty.nix
-    ../modules/home-manager/rofi.nix
+    # ../modules/home-manager/rofi.nix
+    ../modules/home-manager/wofi.nix
     # ../modules/home-manager/gammastep.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
     ../modules/home-manager/nixcord.nix
-    # ../modules/home-manager/dunst.nix
+    ../modules/home-manager/dunst.nix
     # ../modules/home-manager/hyprpanel.nix
     # ../modules/home-manager/minshell.nix
     ../modules/home-manager/waybar.nix
+    ../modules/home-manager/wallpaper.nix
     ../modules/home-manager/tidal.nix
     ../modules/home-manager/helix.nix
     ../modules/home-manager/go.nix
     ../modules/home-manager/R.nix
     ../modules/home-manager/sciediting.nix
+    ../modules/home-manager/zellij.nix
   ];
 
   home.username = "minze";
@@ -76,7 +79,6 @@
     vlc
     inkscape
     tomato-c
-    gcal
     krita
     loupe
     thunderbird
@@ -91,7 +93,6 @@
     btop
     kdePackages.dolphin
     kdePackages.qtsvg
-    koodo-reader
     croc
     zotero
     pavucontrol
@@ -131,7 +132,6 @@
     gnumake
 
     # For Fun
-    nethack
     steam-run
     (lutris.override {
       extraLibraries = pkgs: [

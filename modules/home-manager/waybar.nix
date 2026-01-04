@@ -74,7 +74,8 @@
 
         # Custom modules
         "custom/os" = {
-          "format" = "🍃";
+          format = "🍃";
+          on-click = "waypaper";
         };
       };
     };
