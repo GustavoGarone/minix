@@ -121,23 +121,16 @@
     ]))
     nil # Nix LS
     alejandra # Nix formatter
-    # linters
+    #### linters
     cpplint
     hlint
     shellcheck
     vale
     selene
-    # linters ^
-    # py packages
+    #### py packages
     gnumake
 
-    # For Fun
-    steam-run
-    (lutris.override {
-      extraLibraries = pkgs: [
-        # Extra packages for lutris dependencies
-      ];
-    })
+    #### For Fun
     wineWowPackages.waylandFull
     cbonsai
     cmatrix
