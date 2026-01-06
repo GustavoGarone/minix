@@ -66,7 +66,6 @@
     inkscape
     krita
     loupe
-    thunderbird
     obsidian
     tokei
     wiki-tui
@@ -80,16 +79,9 @@
     pavucontrol
     hyprpicker
 
-    # TODO: add separate files for different programing languages if you want
-    # them in the system instead of dev envs.
-
     # Programming
     # Neovim # Defined in stylix.nix for stylix support
-    quarto
-    librsvg # converting plots to pdf
-    pgformatter
     julia-bin
-    marksman # Markdown language server
     (python313.withPackages (ppkgs: [
       ppkgs.pynvim
       ppkgs.flake8
