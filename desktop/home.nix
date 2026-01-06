@@ -1,10 +1,4 @@
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   # Home Manager needs a bit of information about you and the paths it should
   # manager
   imports = [
@@ -47,15 +41,11 @@
   home.packages = with pkgs; [
     # "OS" Packages
     yazi
-    # rofi-wayland plugins. Rest of rofi defined in module
-    # See https://discourse.nixos.org/t/rofi-emoji-plugin-instructions-dont-work-need-help/49696/4
-    rofi-power-menu
     unzip
     distrobox
     wl-clipboard
     libnotify
     tree
-    kdePackages.polkit-kde-agent-1
     jellyfin-ffmpeg
     hyperfine
     unrar
@@ -69,34 +59,24 @@
     zoxide
     bat
     delta
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5.qtwayland
-    qt6Packages.qtwayland
-    qt6.qtwayland
 
     # General Software
     qbittorrent
     vlc
     inkscape
-    tomato-c
     krita
     loupe
     thunderbird
     obsidian
     tokei
-    mprocs
     wiki-tui
     evince
     grimblast
     libreoffice-qt
-    zapzap
     btop
     kdePackages.dolphin
-    kdePackages.qtsvg
     croc
-    zotero
     pavucontrol
-    librewolf
     hyprpicker
 
     # TODO: add separate files for different programing languages if you want
@@ -119,28 +99,11 @@
       ppkgs.ipykernel
       ppkgs.jupyter-cache
     ]))
-    nil # Nix LS
-    alejandra # Nix formatter
-    #### linters
-    cpplint
-    hlint
-    shellcheck
-    vale
-    selene
-    #### py packages
-    gnumake
 
     #### For Fun
-    wineWowPackages.waylandFull
     cbonsai
     cmatrix
     fastfetch
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # TODO: create a script for updating flakes and switching home-manager (do the same for sys)
     # # You can also create simple shell scripts directly inside your
