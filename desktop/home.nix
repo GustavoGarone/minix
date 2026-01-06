@@ -62,7 +62,7 @@
 
     # General Software
     qbittorrent
-    vlc
+    mpv
     inkscape
     krita
     loupe
