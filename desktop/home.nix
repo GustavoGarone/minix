@@ -21,6 +21,7 @@
     ../modules/home-manager/helix.nix
     ../modules/home-manager/go.nix
     ../modules/home-manager/R.nix
+    ../modules/home-manager/python.nix
     ../modules/home-manager/sciediting.nix
     ../modules/home-manager/zellij.nix
   ];
@@ -80,18 +81,7 @@
     hyprpicker
 
     # Programming
-    # Neovim # Defined in stylix.nix for stylix support
     julia-bin
-    (python313.withPackages (ppkgs: [
-      ppkgs.pynvim
-      ppkgs.flake8
-      ppkgs.black
-      ppkgs.mdformat
-      ppkgs.isort
-      ppkgs.jupyter
-      ppkgs.ipykernel
-      ppkgs.jupyter-cache
-    ]))
 
     #### For Fun
     cbonsai
