@@ -75,6 +75,7 @@
     libreoffice-qt
     btop
     kdePackages.dolphin
+    dragon-drop
     croc
     pavucontrol
     hyprpicker
