@@ -27,6 +27,7 @@ in {
     ../modules/home-manager/zen-browser.nix
     ../modules/home-manager/helix.nix
     ../modules/home-manager/R.nix
+    ../modules/home-manager/python.nix
     ../modules/home-manager/go.nix
     ../modules/home-manager/sciediting.nix
     # ../modules/home-manager/dunst.nix
@@ -53,9 +54,6 @@ in {
     # "OS" Packages
     yazi
     powertop
-    # rofi-wayland plugins. Rest of rofi defined in module
-    # See https://discourse.nixos.org/t/rofi-emoji-plugin-instructions-dont-work-need-help/49696/4
-    rofi-power-menu
     unzip
     distrobox
     wl-clipboard
@@ -74,15 +72,10 @@ in {
     zoxide
     bat
     delta
-    qt6Packages.qtwayland
-    qt6.qtwayland
-    qt5.qtwayland
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5.qtwayland
 
     # General Software
     qbittorrent
-    vlc
+    mpv
     inkscape
     tomato-c
     gcal
@@ -97,9 +90,9 @@ in {
     grimblast
     libreoffice-qt
     zapzap
+    dragon-drop
     btop
     kdePackages.dolphin
-    kdePackages.qtsvg
     koodo-reader
     croc
     zotero
@@ -107,13 +100,6 @@ in {
     librewolf
     hyprpicker
 
-    # TODO: add separate files for different programing languages if you want
-    # them in the system instead of dev envs.
-
-    # Programming
-    # Neovim # Defined in stylix.nix for stylix support
-    quarto
-    librsvg # converting plots to pdf
     julia-bin
     xeus # jupyteR kernel
     ark # idem
@@ -126,40 +112,16 @@ in {
       ppkgs.isort
       ppkgs.ipykernel
     ]))
-    nil # Nix LS
-    alejandra # Nix formatter
-    # linters
-    cpplint
-    sqruff # SQL in Rust
-    hlint
-    shellcheck
-    vale
-    selene
-    # linters ^
     # py packages
     gnumake
-    texliveFull
-    tex-fmt # Latex formatter in rust
 
     # For Fun
     nethack
     steam
-    (lutris.override {
-      extraLibraries = pkgs: [
-        # Extra packages for lutris dependencies
-      ];
-    })
     tidal-hifi
-    wineWowPackages.waylandFull
     cbonsai
     cmatrix
     fastfetch
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
 
     # TODO: create a script for updating flakes and switching home-manager (do the same for sys)
     # # You can also create simple shell scripts directly inside your
