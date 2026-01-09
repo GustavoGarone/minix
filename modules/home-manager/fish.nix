@@ -50,7 +50,8 @@
     shellAliases = {
       neofetch = "fastfetch";
       ls = "eza --icons=auto";
-      ll = "ls -l";
+      ll = "eza --icons=auto -l";
+      tree = "eza --icons=auto -T";
       cd = "z";
       update = "sudo nixos-rebuild switch --flake /etc/nixos/#default --impure --upgrade";
       rimworld = "steam-run ~/GOG\ Games/RimWorld/start.sh";

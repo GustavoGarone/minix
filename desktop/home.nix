@@ -48,7 +48,6 @@
     distrobox
     wl-clipboard
     libnotify
-    tree
     jellyfin-ffmpeg
     hyperfine
     unrar
