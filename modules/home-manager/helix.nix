@@ -101,6 +101,11 @@
         # formatter.args = ["-"];
       }
       {
+        name = "html";
+        auto-format = true;
+        language-servers = ["superhtml"];
+      }
+      {
         name = "markdown";
         auto-format = true;
         # formatter.command = "mdformat";
@@ -118,4 +123,8 @@
       };
     };
   };
+  home.packages = with pkgs; [
+    marksman
+    alejandra
+  ];
 }

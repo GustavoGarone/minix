@@ -20,8 +20,10 @@
     ../modules/home-manager/tidal.nix
     ../modules/home-manager/helix.nix
     ../modules/home-manager/go.nix
+    ../modules/home-manager/julia.nix
     ../modules/home-manager/R.nix
     ../modules/home-manager/python.nix
+    ../modules/home-manager/html.nix
     ../modules/home-manager/sciediting.nix
     ../modules/home-manager/zellij.nix
   ];
@@ -80,9 +82,6 @@
     pavucontrol
     hyprpicker
 
-    # Programming
-    julia-bin
-
     #### For Fun
     cbonsai
     cmatrix
@@ -125,10 +124,6 @@
     R_HOME = "${pkgs.R}/lib/R";
     # LD_LIBRARY_PATH = "${pkgs.R}/lib/R/lib:$LD_LIBRARY_PATH";
   };
-
-  home.sessionPath = [
-    "home/minze/.julia/bin"
-  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
