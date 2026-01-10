@@ -60,6 +60,8 @@
       bind =
         [
           "$mod, a, exec, wofi --show drun --show-icons"
+          "$mod, P, exec, hyprpicker -a"
+          "$mod shift, p, exec, hyprpicker -a --format=hsl"
           # "$mod, x, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
           # "$mod, i, exec, rofi -show emoji -modi emoji"
           "$mod SHIFT, M, exec, pkill Hyprland"
@@ -67,17 +69,15 @@
           "$mod, s, exec, grimblast copy area --freeze"
           "$mod SHIFT, s, exec, grimblast save area --freeze"
           "$mod, q, exec, kitty"
-          "$mod, e, exec, dolphin"
           "$mod, e, exec, kitty yazi"
           "$CTRL SHIFT, Escape, exec, kitty btop"
 
-          "$mod, p, pseudo"
           "$mod, c, killactive"
           "$mod, r, togglesplit"
           "$mod, t, togglefloating"
+          "$mod shift, t, pseudo"
           "$mod, f, fullscreen"
           "$mod, g, togglegroup"
-          "$mod, P, pseudo"
 
           "$mod, h, movefocus, l"
           "$mod, j, movefocus, d"
