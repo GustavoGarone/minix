@@ -60,6 +60,8 @@
       grepa = "rga";
       find = "fd";
       diff = "delta";
+      zj = "zellij";
+      zja = "zellij attach";
       runic = "julia --project=@runic -e 'using Runic; exit(Runic.main(ARGS))' --";
     };
   };
