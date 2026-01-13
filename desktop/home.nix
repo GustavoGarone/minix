@@ -72,6 +72,7 @@
     tokei
     wiki-tui
     evince
+    obs-studio
     grimblast
     libreoffice-qt
     btop
