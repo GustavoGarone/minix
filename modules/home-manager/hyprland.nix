@@ -12,8 +12,12 @@
     enable = true;
     # catppuccin.enable = true;
     settings = {
-      input.kb_layout = "br";
-      input.touchpad.natural_scroll = true;
+      input = {
+        kb_layout = "br";
+        touchpad.natural_scroll = true;
+        repeat_delay = 150;
+        repeat_rate = 50;
+      };
 
       general = {
         gaps_in = 1;
