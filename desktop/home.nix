@@ -6,7 +6,6 @@
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/kitty.nix
-    # ../modules/home-manager/rofi.nix
     ../modules/home-manager/wofi.nix
     # ../modules/home-manager/gammastep.nix
     ../modules/home-manager/stylix.nix
@@ -26,6 +25,7 @@
     ../modules/home-manager/html.nix
     ../modules/home-manager/sciediting.nix
     ../modules/home-manager/zellij.nix
+    ../modules/home-manager/copyq.nix
   ];
 
   home.username = "minze";
@@ -46,7 +46,6 @@
     yazi
     unzip
     distrobox
-    wl-clipboard
     libnotify
     jellyfin-ffmpeg
     hyperfine

@@ -51,7 +51,6 @@
       ];
 
       exec-once = [
-        # "minshell"
         "waybar"
         "hyprctl setcursor Bibata-Modern-Classic 16"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
