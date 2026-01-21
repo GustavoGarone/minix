@@ -6,4 +6,7 @@
     rPackages.ggplot2
     air-formatter
   ];
+  home.sessionVariables = {
+    R_BROWSER = "xdg-open";
+  };
 }
