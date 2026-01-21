@@ -5,7 +5,7 @@
 }: {
   # Home module hyprland config
   wayland.windowManager.hyprland = {
-    # Tell NixOS to use system packages instead of home manager packes for portal
+    # Tell NixOS to use system packages instead of home manager pkgs for portal
     # Compatibility
     package = null;
     portalPackage = null;
