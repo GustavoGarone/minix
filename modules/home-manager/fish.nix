@@ -54,7 +54,6 @@
       tree = "eza --icons=auto -T";
       cd = "z";
       update = "sudo nixos-rebuild switch --flake /etc/nixos/#default --impure --upgrade";
-      rimworld = "steam-run ~/GOG\ Games/RimWorld/start.sh";
       cat = "bat";
       grep = "rg";
       grepa = "rga";
