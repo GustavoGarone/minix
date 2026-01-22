@@ -1,9 +1,8 @@
-{pkgs, ...}:
-{
+{pkgs, ...}: {
   services.hardware.openrgb = {
     enable = true;
-  }
-  home.packages = with pkgs; [
+  };
+  environment.systemPackages = with pkgs; [
     openrgb
-  ]
+  ];
 }

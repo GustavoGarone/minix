@@ -26,7 +26,6 @@
     ../modules/home-manager/sciediting.nix
     ../modules/home-manager/zellij.nix
     ../modules/home-manager/copyq.nix
-    ../modules/nixos/openrgb.nix
   ];
 
   home.username = "minze";
