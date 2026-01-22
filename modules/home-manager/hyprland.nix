@@ -14,7 +14,6 @@
     settings = {
       input = {
         kb_layout = "br";
-        touchpad.natural_scroll = true;
         repeat_delay = 150;
         repeat_rate = 50;
       };
