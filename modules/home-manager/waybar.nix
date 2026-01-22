@@ -46,6 +46,10 @@
           };
         };
 
+        "tray" = {
+          spacing = 10;
+        };
+
         "mpris" = {
           format = "{artist} {player_icon} {title}";
           format-paused = "{artist} {status_icon} {title}";
