@@ -92,6 +92,10 @@
           "$mod ALT, ,resizeactive,"
           "$mod SHIFT, z, movetoworkspace, special"
           "$mod, z, togglespecialworkspace, special"
+
+          # Keyboard audio wheel
+          ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+"
+          ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-"
         ]
         ++ (
           # workspaces
