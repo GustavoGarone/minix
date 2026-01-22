@@ -69,7 +69,10 @@
 
         "pulseaudio" = {
           format = "󰕾  {volume}%";
+          format-bluetooth = "󰕾  {volume}% ";
           format-muted = "󰸈 ";
+          on-click-right = "pavucontrol";
+          on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         };
 
         # Custom modules
