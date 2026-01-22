@@ -126,7 +126,7 @@
 
       background = lib.mkForce [
         {
-          path = "~/wallpapers/everforest.jpg";
+          path = "$HOME/wallpapers/everforest.jpg";
         }
       ];
 
@@ -145,52 +145,8 @@
     };
   };
 
-  # Hyprpaper
-  services.hyprpaper = {
-    package = pkgs.hyprpaper;
+  # Authenticator
+  services.hyprpolkitagent = {
     enable = true;
-    settings = {
-      ipc = "off";
-      splash = "false";
-
-      preload = lib.mkForce [
-        # "~/wallpapers/ruin.jpg"
-        # "~/wallpapers/mimir.jpg"
-        # "~/wallpapers/harvest.jpg"
-        # "~/wallpapers/trashfire.webp"
-        # "~/wallpapers/lostconstellation.jpg"
-        # "~/wallpapers/everforest.jpg"
-        # "~/wallpapers/evererforest.jpg"
-        # "~/wallpapers/NITWgreggrulzok.jpg"
-        "~/wallpapers/nitwcitynight.jpg"
-        # "~/wallpapers/nitwwitchdaggah.jpg"
-        # "~/wallpapers/greggroof.jpg"
-      ];
-
-      wallpaper = lib.mkForce [
-        # "eDP-1,~/wallpapers/ruin.jpg"
-        # "eDP-1,~/wallpapers/mimir.jpg"
-        # "eDP-1,~/wallpapers/harvest.jpg"
-        # "eDP-1,~/wallpapers/trashfire.webp"
-        # "eDP-1,~/wallpapers/lostconstellation.jpg"
-        # "eDP-1, ~/wallpapers/everforest.jpg"
-        # "eDP-1, ~/wallpapers/evererforest.jpg"
-        # "eDP-1, ~/wallpapers/NITWgreggrulzok.jpg"
-        # "eDP-1, ~/wallpapers/greggroof.jpg"
-        "eDP-1, ~/wallpapers/nitwcitynight.jpg"
-        # "eDP-1, ~/wallpapers/nitwwitchdaggah.jpg"
-        # "HDMI-A-1,~/wallpapers/ruin.jpg"
-        # "HDMI-A-1,~/wallpapers/mimir.jpg"
-        # "HDMI-A-1,~/wallpapers/harvest.jpg"
-        # "HDMI-A-1,~/wallpapers/trashfire.webp"
-        # "HDMI-A-1,~/wallpapers/lostconstellation.jpg"
-        # "HDMI-A-1, ~/wallpapers/everforest.jpg"
-        # "HDMI-A-1, ~/wallpapers/evererforest.jpg"
-        # "HDMI-A-1, ~/wallpapers/NITWgreggrulzok.jpg"
-        # "HDMI-A-1, ~/wallpapers/greggroof.jpg"
-        "HDMI-A-1, ~/wallpapers/nitwcitynight.jpg"
-        # "HMDI-A-1, ~/wallpapers/nitwwitchdaggah.jpg"
-      ];
-    };
   };
 }
