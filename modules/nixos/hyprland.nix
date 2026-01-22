@@ -2,14 +2,15 @@
   # XDG Portal
   xdg.portal = {
     enable = true;
-    wlr.enable = true;
     xdgOpenUsePortal = true;
     config = {
       common.default = ["gtk"];
       hyprland.default = ["gtk" "hyprland"];
     };
-    configPackages = [pkgs.xdg-desktop-portal-gtk];
-    extraPortals = [pkgs.xdg-desktop-portal-gtk];
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+      # pkgs.xdg-desktop-portal-hyprland # handled in module
+    ];
     # configPackages = [ pkgs.xdg-desktop-portal-gtk ];
     # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
@@ -30,7 +31,7 @@
   };
   # Hyprland
   programs.hyprland = {
-    enable = true;
+    enable = true; # Already handles the xdg-desktop-portal-hyprland
     xwayland.enable = true;
   };
   # Hyprlock
