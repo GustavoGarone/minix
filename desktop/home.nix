@@ -7,13 +7,10 @@
     ../modules/home-manager/git.nix
     ../modules/home-manager/kitty.nix
     ../modules/home-manager/wofi.nix
-    # ../modules/home-manager/gammastep.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
     ../modules/home-manager/nixcord.nix
     ../modules/home-manager/dunst.nix
-    # ../modules/home-manager/hyprpanel.nix
-    # ../modules/home-manager/minshell.nix
     ../modules/home-manager/waybar.nix
     ../modules/home-manager/wallpaper.nix
     ../modules/home-manager/tidal.nix
@@ -26,6 +23,7 @@
     ../modules/home-manager/sciediting.nix
     ../modules/home-manager/zellij.nix
     ../modules/home-manager/copyq.nix
+    ../modules/home-manager/gimp.nix
   ];
 
   home.username = "minze";
