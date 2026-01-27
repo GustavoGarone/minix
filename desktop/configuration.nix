@@ -100,7 +100,7 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     __GL_GSYNC_ALLOWED = "0";
     __GL_VRR_ALLOWED = "0";
-    EDITOR = "nvim";
+    EDITOR = "hx";
     GTK_USE_PORTAL = "1";
   };
 

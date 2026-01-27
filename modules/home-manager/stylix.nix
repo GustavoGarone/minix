@@ -6,10 +6,10 @@
   ...
 }: let
   inherit (pkgs.stdenv.hostPlatform) system;
-  nixvim-package = inputs.minvim.packages.${system}.default;
-  extminvim =
-    nixvim-package.extend
-    config.stylix.targets.nixvim.exportedModule;
+  # nixvim-package = inputs.minvim.packages.${system}.default;
+  # extminvim =
+  #   nixvim-package.extend
+  #   config.stylix.targets.nixvim.exportedModule;
 in {
   stylix = {
     enable = true;
@@ -45,6 +45,6 @@ in {
 
   # Minvim with stylix
   home.packages = with pkgs; [
-    extminvim
+    # extminvim
   ];
 }
