@@ -94,6 +94,8 @@
     packages = with pkgs; [];
   };
 
+  nix.settings.trusted-users = ["minze"];
+
   # Sessions variables
   environment.sessionVariables = {
     # LD_LIBRARY_PATH = "${pkgs.gcc.cc.lib}/lib:${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH";

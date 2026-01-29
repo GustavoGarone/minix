@@ -59,6 +59,9 @@
     bat
     delta
 
+    # Programming
+    devenv
+
     # General Software
     qbittorrent
     mpv
