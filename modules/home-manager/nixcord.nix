@@ -11,13 +11,8 @@
         fakeNitro.enable = true;
         volumeBooster.enable = true;
         youtubeAdblock.enable = true;
+        ClearURLs.enable = true;
       };
     };
   };
-  programs.vesktop = {
-    enable = false;
-  };
-  home.packages = with pkgs; [
-    legcord
-  ];
 }
