@@ -82,6 +82,7 @@
     kdePackages.dolphin
     kdePackages.kclock
     dragon-drop
+    rnote
     croc
     pavucontrol
     hyprpicker
