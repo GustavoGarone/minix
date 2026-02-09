@@ -69,6 +69,8 @@
     krita
     loupe
     obsidian
+    koodo-reader
+    zed-editor
     tokei
     wiki-tui
     evince
@@ -77,6 +79,7 @@
     libreoffice-qt
     btop
     kdePackages.dolphin
+    kdePackages.kclock
     dragon-drop
     croc
     pavucontrol

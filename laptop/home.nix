@@ -93,6 +93,7 @@ in {
     dragon-drop
     btop
     kdePackages.dolphin
+    kdePackages.kclock
     koodo-reader
     croc
     zotero
