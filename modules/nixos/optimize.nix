@@ -25,7 +25,7 @@
   nix.settings.auto-optimise-store = true;
 
   # Enable memory killing.
-  services.earlyoom = {
-    enable = true;
-  };
+  # services.earlyoom = {
+  #   enable = true;
+  # };
 }
