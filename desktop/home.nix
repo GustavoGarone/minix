@@ -24,6 +24,7 @@
     ../modules/home-manager/zellij.nix
     ../modules/home-manager/copyq.nix
     ../modules/home-manager/gimp.nix
+    ../modules/home-manager/matrix.nix
   ];
 
   home.username = "minze";

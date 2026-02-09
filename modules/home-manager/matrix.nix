@@ -1,6 +1,5 @@
 {pkgs, ...}: {
-  home.Packages = with pkgs; [
+  home.packages = with pkgs; [
     element-desktop
-    fractal
   ];
 }
