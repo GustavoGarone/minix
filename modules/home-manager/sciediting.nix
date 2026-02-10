@@ -6,6 +6,7 @@
     rPackages.quarto
     rPackages.air
     marksman
+    librsvg # Convert svgs
     air-formatter
     quarto
     zotero
