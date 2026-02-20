@@ -128,8 +128,8 @@
   };
 
   # Virtualisation
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
+  # virtualisation.libvirtd.enable = true;
+  # programs.virt-manager.enable = true;
 
   # ZSH Shell
   # programs.zsh.enable = true;
