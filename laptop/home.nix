@@ -17,24 +17,25 @@ in {
   # manager
   imports = [
     ../modules/home-manager/hyprland.nix
-    ../modules/home-manager/improvs.nix
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/kitty.nix
-    ../modules/home-manager/rofi.nix
-    ../modules/home-manager/gammastep.nix
+    ../modules/home-manager/wofi.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
+    ../modules/home-manager/nixcord.nix
+    ../modules/home-manager/dunst.nix
+    ../modules/home-manager/waybar.nix
+    ../modules/home-manager/copyq.nix
+    ../modules/home-manager/wallpaper.nix
     ../modules/home-manager/helix.nix
+    ../modules/home-manager/julia.nix
     ../modules/home-manager/R.nix
     ../modules/home-manager/python.nix
-    ../modules/home-manager/go.nix
+    ../modules/home-manager/html.nix
     ../modules/home-manager/sciediting.nix
-    # ../modules/home-manager/dunst.nix
-    # ../modules/home-manager/hyprpanel.nix
-    # ../modules/home-manager/minshell.nix
-    ../modules/home-manager/waybar.nix
-    ../modules/home-manager/nixcord.nix
+    ../modules/home-manager/zellij.nix
+    ../modules/home-manager/matrix.nix
   ];
 
   home.username = "minze";
@@ -78,7 +79,6 @@ in {
     mpv
     inkscape
     tomato-c
-    gcal
     krita
     loupe
     thunderbird
@@ -89,7 +89,6 @@ in {
     evince
     grimblast
     libreoffice-qt
-    zapzap
     dragon-drop
     btop
     kdePackages.dolphin
@@ -101,25 +100,7 @@ in {
     librewolf
     hyprpicker
 
-    julia-bin
-    xeus # jupyteR kernel
-    ark # idem
-    (python313.withPackages (ppkgs: [
-      ppkgs.pynvim
-      ppkgs.flake8
-      ppkgs.scipy
-      ppkgs.black
-      ppkgs.mdformat
-      ppkgs.isort
-      ppkgs.ipykernel
-    ]))
-    # py packages
-    gnumake
-
     # For Fun
-    nethack
-    steam
-    tidal-hifi
     cbonsai
     cmatrix
     fastfetch
