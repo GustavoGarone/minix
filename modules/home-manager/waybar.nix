@@ -21,6 +21,7 @@
           "tray"
           "network"
           "pulseaudio"
+          "backlight/slider"
           "battery"
         ];
 
@@ -79,6 +80,28 @@
           on-click = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
         };
 
+        "battery" = {
+          bat = "BAT0";
+          interval = 60;
+          states = {
+            warning = 30;
+            critical = 15;
+          };
+          format = "{capacity}% {icon}";
+          format-icons = {
+            default = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+            charging = ["󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅"];
+          };
+          max-length = 25;
+        };
+
+        "backlight/slider" = {
+          min = 1;
+          max = 100;
+          orientation = "horizontal";
+          device = "intel_backlight";
+        };
+
         # Custom modules
         "custom/os" = {
           format = "🍃";
@@ -115,6 +138,29 @@
 
         .modules-right > * > * {
           margin: 0px 5px;
+        }
+
+        #backlight-slider slider {
+          min-height: 0px;
+          min-width: 0px;
+          opacity: 0;
+          background-image: none;
+          border: none;
+          box-shadow: none;
+          background: none;
+        }
+
+        #backlight-slider trough {
+          min-height: 10px;
+          min-width: 80px;
+          border-radius: 5px;
+          background: black;
+        }
+
+        #backlight-slider highlight {
+          min-width: 10px;
+          border-radius: 5px;
+          background: #f9ebd8;
         }
 
       '';
