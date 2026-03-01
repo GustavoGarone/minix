@@ -126,5 +126,6 @@
   home.packages = with pkgs; [
     marksman
     alejandra
+    nil
   ];
 }
