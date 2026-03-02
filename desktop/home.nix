@@ -23,7 +23,6 @@
     ../modules/home-manager/sciediting.nix
     ../modules/home-manager/zellij.nix
     ../modules/home-manager/copyq.nix
-    ../modules/home-manager/gimp.nix
     ../modules/home-manager/matrix.nix
   ];
 

@@ -53,7 +53,6 @@
         home-manager.nixosModules.home-manager
         {
           home-manager.extraSpecialArgs = {inherit inputs;};
-          # home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.minze = import ./desktop/home.nix;
           home-manager.backupFileExtension = "bkphm";
@@ -84,7 +83,6 @@
         auto-cpufreq.nixosModules.default
         {
           home-manager.extraSpecialArgs = {inherit inputs;};
-          # home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.minze = import ./laptop/home.nix;
           home-manager.backupFileExtension = "bkphm";
