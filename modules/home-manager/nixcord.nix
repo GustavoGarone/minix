@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs.nixcord = {
     enable = true; # enable Nixcord. Also installs discord package
+    discord.enable = false;
     vesktop.enable = true;
     config = {
       # frameless = true; # set some Vencord options
