@@ -29,8 +29,6 @@
       };
 
       env = [
-        "HYPRCURSOR_THEME,Bibata-Modern-Classic"
-        "HYPRCURSOR_SIZE,16"
         "ELECTRON_OZONE_PLATFORM_HINT,auto"
       ];
 
@@ -51,7 +49,6 @@
 
       exec-once = [
         "waybar"
-        "hyprctl setcursor Bibata-Modern-Classic 16"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "systemctl --user start hyprpolkitagent"
       ];
