@@ -9,7 +9,7 @@
     };
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk
-      # pkgs.xdg-desktop-portal-hyprland # handled in module
+      pkgs.xdg-desktop-portal-hyprland
     ];
     # configPackages = [ pkgs.xdg-desktop-portal-gtk ];
     # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
@@ -23,6 +23,7 @@
     MOZ_ENABLE_WAYLAND = "1";
     NIXOS_OZONE_WL = "1";
   };
+  environment.pathsToLink = ["/share/applications" "/share/xdg-desktop-portal"];
   # Cachix to not build Hyprland depedencies
   nix.settings = {
     substituters = ["https://hyprland.cachix.org"];

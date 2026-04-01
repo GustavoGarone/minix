@@ -1,31 +1,18 @@
-{
-  lib,
-  pkgs,
-  ...
-}: {
-  # Home module hyprland config
+{lib, ...}: {
   wayland.windowManager.hyprland = {
-    # Tell NixOS to use system packages instead of home manager pkgs for portal
-    # Compatibility
-    package = null;
-    portalPackage = null;
     enable = true;
-    # catppuccin.enable = true;
     settings = {
       input = {
         kb_layout = "br";
-        repeat_delay = 150;
-        repeat_rate = 50;
+        repeat_delay = 140;
+        repeat_rate = 45;
       };
 
       general = {
         gaps_in = 1;
-        gaps_out = 1;
-        border_size = 1;
+        gaps_out = 5;
+        border_size = 0;
         layout = "dwindle";
-
-        # "col.active_border" = "rgb(579C79)";
-        # "col.inactive_border" = "rgb(362419)";
       };
 
       env = [
@@ -33,18 +20,13 @@
       ];
 
       decoration = {
-        rounding = 2;
+        rounding = 3;
         blur.enabled = "true";
-        # drop_shadow = "false";
       };
       animations.enabled = "yes";
 
-      windowrule = "border_size 0, match:float 1";
-
       monitor = [
         "eDP-1, 1920x1080@120, -1920x0, 1"
-        # "HDMI-A-1, 1920x1080@60, 0x0, 1"
-        # ", preferred, auto-left, 1"
       ];
 
       exec-once = [
@@ -62,8 +44,6 @@
           "$mod, a, exec, wofi --show drun --show-icons"
           "$mod, P, exec, hyprpicker -a"
           "$mod shift, p, exec, hyprpicker -a --format=hsl"
-          # "$mod, x, exec, rofi -show power-menu -modi power-menu:rofi-power-menu"
-          # "$mod, i, exec, rofi -show emoji -modi emoji"
           "$mod SHIFT, M, exec, pkill Hyprland"
           "$mod SHIFT, l, exec, hyprlock"
           "$mod, s, exec, grimblast copy area --freeze"

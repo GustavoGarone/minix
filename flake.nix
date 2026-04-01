@@ -21,7 +21,6 @@
       url = "github:FlameFlag/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    hyprland.url = "github:hyprwm/Hyprland";
     tidaLuna.url = "github:Inrixia/TidaLuna";
   };
 
@@ -33,7 +32,6 @@
     zen-browser,
     stylix,
     nixcord,
-    hyprland,
     auto-cpufreq,
     tidaLuna,
     ...
@@ -55,7 +53,6 @@
       modules = [
         ./desktop/configuration.nix
         stylix.nixosModules.stylix
-        hyprland.nixosModules.default
         home-manager.nixosModules.home-manager
         {
           home-manager.extraSpecialArgs = {inherit inputs;};
@@ -66,15 +63,6 @@
             nixcord.homeModules.nixcord
             stylix.homeModules.stylix
             zen-browser.homeModules.beta
-            # {
-            #   wayland.windowManager.hyprland = {
-            #     enable = true;
-            #     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-            #     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-            #     # package = null;
-            #     # portalPackage = null;
-            #   };
-            # }
           ];
         }
       ];
@@ -84,7 +72,6 @@
       modules = [
         ./laptop/configuration.nix
         stylix.nixosModules.stylix
-        hyprland.nixosModules.default
         home-manager.nixosModules.home-manager
         auto-cpufreq.nixosModules.default
         {
@@ -96,15 +83,6 @@
             nixcord.homeModules.nixcord
             stylix.homeModules.stylix
             zen-browser.homeModules.beta
-            # {
-            #   wayland.windowManager.hyprland = {
-            #     enable = true;
-            #     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-            #     portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-            #     # package = null;
-            #     # portalPackage = null;
-            #   };
-            # }
           ];
         }
       ];
