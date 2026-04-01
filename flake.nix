@@ -2,10 +2,13 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs";
-    stylix.url = "github:danth/stylix";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    stylix = {
+      url = "github:danth/stylix/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     home-manager = {
-      url = "github:nix-community/home-manager";
+      url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     auto-cpufreq = {
@@ -14,7 +17,10 @@
     };
     minvim.url = "github:GustavoGarone/minvim";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    nixcord.url = "github:kaylorben/nixcord";
+    nixcord = {
+      url = "github:FlameFlag/nixcord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     hyprland.url = "github:hyprwm/Hyprland";
     tidaLuna.url = "github:Inrixia/TidaLuna";
   };

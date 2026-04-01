@@ -45,7 +45,6 @@
     unzip
     distrobox
     libnotify
-    jellyfin-ffmpeg
     hyperfine
     unrar
 
@@ -65,8 +64,6 @@
     # General Software
     qbittorrent
     mpv
-    inkscape
-    krita
     loupe
     obsidian
     koodo-reader
@@ -125,8 +122,6 @@
   home.sessionVariables = {
     EDITOR = "hx";
     QT_QPA_PLATFORM = "wayland;xcb";
-    R_HOME = "${pkgs.R}/lib/R";
-    # LD_LIBRARY_PATH = "${pkgs.R}/lib/R/lib:$LD_LIBRARY_PATH";
   };
 
   # Let Home Manager install and manage itself.

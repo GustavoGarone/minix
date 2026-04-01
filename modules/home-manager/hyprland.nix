@@ -73,7 +73,6 @@
           "$CTRL SHIFT, Escape, exec, kitty btop"
 
           "$mod, c, killactive"
-          "$mod, r, togglesplit"
           "$mod, t, togglefloating"
           "$mod shift, t, pseudo"
           "$mod, f, fullscreen"
