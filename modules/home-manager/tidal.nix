@@ -1,10 +1,5 @@
-{
-  pkgs,
-  inputs,
-  ...
-}: {
+{pkgs, ...}: {
   home.packages = with pkgs; [
-    # inputs.tidaLuna.packages.${system}.default
     tidal-hifi
   ];
 }

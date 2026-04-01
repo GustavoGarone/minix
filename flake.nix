@@ -21,7 +21,6 @@
       url = "github:FlameFlag/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    tidaLuna.url = "github:Inrixia/TidaLuna";
   };
 
   outputs = {
@@ -33,7 +32,6 @@
     stylix,
     nixcord,
     auto-cpufreq,
-    tidaLuna,
     ...
   } @ inputs: let
     system = "x86_64-linux";
