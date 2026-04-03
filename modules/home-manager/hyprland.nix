@@ -24,6 +24,13 @@
         blur.enabled = "true";
       };
       animations.enabled = "yes";
+      animation = [
+        "workspaces, 1, 2, default"
+        "specialWorkspace, 1, 2, default, fade"
+        "windows, 1, 2, default, popin"
+        "border, 1, 2, default"
+        "fade, 1, 2, default"
+      ];
 
       monitor = [
         "eDP-1, 1920x1080@120, -1920x0, 1"
@@ -31,7 +38,8 @@
 
       exec-once = [
         "waybar"
-        "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+        "bash -c 'dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP && systemctl --user restart xdg-desktop-portal.service'"
+        "hyprctl setcursor Bibata-Modern-Classic 14"
         "systemctl --user start hyprpolkitagent"
       ];
       "$mod" = "SUPER";

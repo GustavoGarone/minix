@@ -78,11 +78,9 @@
   environment.sessionVariables = {
     # LD_LIBRARY_PATH = "${pkgs.gcc.cc.lib}/lib:${pkgs.stdenv.cc.cc.lib}/lib:$LD_LIBRARY_PATH";
     NIXOS_OZONE_WL = "1";
-    WLR_NO_HARDWARE_CURSORS = "1";
     __GL_GSYNC_ALLOWED = "0";
     __GL_VRR_ALLOWED = "0";
     EDITOR = "hx";
-    GTK_USE_PORTAL = "1";
   };
 
   environment.systemPackages = with pkgs; [
