@@ -11,4 +11,10 @@
       size = lib.mkForce 10.5;
     };
   };
+  programs.zed-editor.userSettings.terminal.env.TERM = "kitty";
+  wayland.windowManager.hyprland.settings.bind = [
+    "$mod, q, exec, kitty"
+    "$mod, e, exec, kitty yazi"
+    "$CTRL SHIFT, Escape, exec, kitty btop"
+  ];
 }

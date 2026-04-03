@@ -56,9 +56,6 @@
           "$mod SHIFT, l, exec, hyprlock"
           "$mod, s, exec, grimblast copy area --freeze"
           "$mod SHIFT, s, exec, grimblast save area --freeze"
-          "$mod, q, exec, kitty"
-          "$mod, e, exec, kitty yazi"
-          "$CTRL SHIFT, Escape, exec, kitty btop"
 
           "$mod, c, killactive"
           "$mod, t, togglefloating"

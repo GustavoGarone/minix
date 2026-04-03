@@ -56,9 +56,6 @@
             activate_script = "default";
           };
         };
-        env = {
-          TERM = "kitty";
-        };
         font_family = "FiraCode Nerd Font";
         font_features = null;
         font_size = null;
