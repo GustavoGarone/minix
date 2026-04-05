@@ -64,6 +64,7 @@
     # General Software
     qbittorrent
     mpv
+    ffmpeg
     loupe
     obsidian
     koodo-reader
