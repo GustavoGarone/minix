@@ -1,4 +1,4 @@
-{pkgs, ...}: {
+{
   programs.nixcord = {
     enable = true; # enable Nixcord. Also installs discord package
     discord.enable = false;

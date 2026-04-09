@@ -5,7 +5,7 @@
     ../modules/home-manager/hyprland.nix
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
-    ../modules/home-manager/kitty.nix
+    ../modules/home-manager/ghostty.nix
     ../modules/home-manager/wofi.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix

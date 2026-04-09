@@ -5,6 +5,9 @@
     fishPlugins.z
   ];
   programs.kitty.settings.shell = "${pkgs.fish}/bin/fish";
+  programs.ghostty = {
+    enableFishIntegration = true;
+  };
   programs.fish = {
     enable = true;
     # ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
