@@ -1,10 +1,4 @@
-{
-  inputs,
-  pkgs,
-  config,
-  lib,
-  ...
-}: let
+{pkgs, ...}: let
   inherit (pkgs.stdenv.hostPlatform) system;
   # nixvim-package = inputs.minvim.packages.${system}.default;
   # extminvim =
@@ -28,6 +22,13 @@ in {
       dark = "Papirus-Dark";
       light = "Papirus-Light";
     };
+    fonts = {
+      sizes.desktop = 10;
+      monospace = {
+        package = pkgs.nerd-fonts.victor-mono;
+        name = "VictorMono NF";
+      };
+    };
     targets = {
       hyprland = {
         enable = true;
@@ -35,10 +36,10 @@ in {
       };
       zen-browser = {
         enable = false;
-        # profileNames = ["garonegustavo@gmail.com"];
       };
-      waybar = {
-        # enable = false;
+      ghostty = {
+        opacity.override.terminal = 0.85;
+        fonts.override.monospace.name = "VictorMono NF";
       };
     };
   };
