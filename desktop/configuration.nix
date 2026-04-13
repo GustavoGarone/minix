@@ -15,6 +15,7 @@
     ../modules/nixos/steam.nix
     ../modules/nixos/fonts.nix
     ../modules/nixos/network.nix
+    ../modules/nixos/protonvpn.nix
     ../modules/nixos/stylix.nix
     ../modules/nixos/kernel.nix
   ];
