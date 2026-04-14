@@ -1,10 +1,4 @@
-{
-  inputs,
-  lib,
-  config,
-  pkgs,
-  ...
-}: let
+{pkgs, ...}: let
   # Custom R Packages
   ark = pkgs.fetchFromGitHub {
     owner = "posit-dev";
@@ -19,14 +13,13 @@ in {
     ../modules/home-manager/hyprland.nix
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
-    ../modules/home-manager/kitty.nix
+    ../modules/home-manager/ghostty.nix
     ../modules/home-manager/wofi.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
     ../modules/home-manager/nixcord.nix
     ../modules/home-manager/dunst.nix
     ../modules/home-manager/waybar.nix
-    ../modules/home-manager/copyq.nix
     ../modules/home-manager/wallpaper.nix
     ../modules/home-manager/helix.nix
     ../modules/home-manager/julia.nix
@@ -35,6 +28,7 @@ in {
     ../modules/home-manager/html.nix
     ../modules/home-manager/sciediting.nix
     ../modules/home-manager/zellij.nix
+    ../modules/home-manager/copyq.nix
     ../modules/home-manager/matrix.nix
   ];
 
@@ -86,6 +80,7 @@ in {
     tokei
     mprocs
     wiki-tui
+    rnote
     evince
     grimblast
     libreoffice-qt
