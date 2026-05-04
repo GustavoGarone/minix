@@ -87,6 +87,7 @@
     #### For Fun
     cbonsai
     cmatrix
+    prismlauncher
     fastfetch
 
     # TODO: create a script for updating flakes and switching home-manager (do the same for sys)
