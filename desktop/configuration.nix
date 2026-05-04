@@ -113,6 +113,9 @@
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
+  # Partition manager
+  programs.partition-manager.enable = true;
+
   # services.logmein-hamachi.enable = true;
 
   # ZSH Shell
