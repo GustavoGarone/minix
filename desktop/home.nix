@@ -15,6 +15,7 @@
     ../modules/home-manager/wallpaper.nix
     ../modules/home-manager/tidal.nix
     ../modules/home-manager/helix.nix
+    ../modules/home-manager/zed.nix
     ../modules/home-manager/go.nix
     ../modules/home-manager/julia.nix
     ../modules/home-manager/R.nix
@@ -68,7 +69,6 @@
     loupe
     obsidian
     koodo-reader
-    zed-editor
     tokei
     wiki-tui
     evince
