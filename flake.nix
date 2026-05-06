@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    zed.url = "github:zed-industries/zed";
     stylix = {
       url = "github:danth/stylix/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -32,6 +33,7 @@
     stylix,
     nixcord,
     auto-cpufreq,
+    zed,
     ...
   } @ inputs: let
     system = "x86_64-linux";
