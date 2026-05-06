@@ -70,7 +70,7 @@
     isNormalUser = true;
     description = "minze";
     extraGroups = ["networkmanager" "wheel" "docker" "libvirtd" "gamemode"];
-    packages = with pkgs; [];
+    packages = [];
   };
 
   nix.settings.trusted-users = ["minze"];
@@ -137,11 +137,6 @@
 
   # Security
   services.fail2ban.enable = true;
-  # Open ports in the firewall.
-  networking.firewall.allowedTCPPorts = [22];
-  networking.firewall.allowedUDPPorts = [22 30502];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
 
   # Copy the NixOS configuration file and link it from the resulting system
   # (/run/current-system/configuration.nix). This is useful in case you
