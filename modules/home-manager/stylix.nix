@@ -57,9 +57,6 @@ in {
         enable = true;
         hyprpaper.enable = false;
       };
-      zen-browser = {
-        enable = false;
-      };
       ghostty = {
         opacity.override.terminal = 0.85;
         fonts.override.monospace.name = "VictorMono NF";
