@@ -18,6 +18,9 @@ in {
   programs.zen-browser = {
     enable = true;
 
+    setAsDefaultBrowser = true;
+    enablePrivateDesktopEntry = true;
+
     profiles.minze = rec {
       mods = let
         zenMods = {
