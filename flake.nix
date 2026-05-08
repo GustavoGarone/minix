@@ -55,7 +55,7 @@
         stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
         {
-          home-manager.extraSpecialArgs = {inherit inputs;};
+          home-manager.extraSpecialArgs = {inherit inputs system;};
           home-manager.useUserPackages = true;
           home-manager.users.minze = import ./desktop/home.nix;
           home-manager.backupFileExtension = "bkphm";
@@ -68,7 +68,7 @@
       ];
     };
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
+      specialArgs = {inherit inputs system;};
       modules = [
         ./laptop/configuration.nix
         stylix.nixosModules.stylix
