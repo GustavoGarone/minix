@@ -64,6 +64,7 @@ in {
         opacity.override.terminal = 0.85;
         fonts.override.monospace.name = "VictorMono NF";
       };
+      gtk.extraCss = "*{border-radius:0px;}";
     };
   };
 
