@@ -87,7 +87,6 @@
   "Mod+Shift+T".action.switch-focus-between-floating-and-tiling = [];
   "Mod+W".action.toggle-column-tabbed-display = [];
   "Print".action.screenshot = [];
-  # "Mod+S".action.screenshot.write-to-disk = false;
   "Mod+S".action.screenshot = [];
   "Ctrl+Print".action.screenshot-screen = [];
   "Mod+Shift+S".action.screenshot-screen = [];
