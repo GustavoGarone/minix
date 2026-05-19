@@ -28,6 +28,10 @@
         ];
 
         # Module configuration
+        "niri/workspaces" = {
+          hide-empty = true;
+        };
+
         "clock" = {
           format-alt = "{:%A, %B %d, %Y (%R)}";
           tooltip-format = "<tt>{calendar}</tt>";
