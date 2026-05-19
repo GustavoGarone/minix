@@ -11,7 +11,8 @@
     # Probably not a good idea to use both!
     # ../modules/nixos/auto-cpufreq.nix
     ../modules/nixos/tlp.nix
-    ../modules/nixos/hyprland.nix
+    ../modules/nixos/pipewire.nix
+    ../modules/nixos/xdg-portals.nix
     ../modules/nixos/fish.nix
     ../modules/nixos/optimize.nix
     ../modules/nixos/ssh.nix

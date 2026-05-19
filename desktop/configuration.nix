@@ -8,7 +8,7 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../modules/nixos/nvidia.nix
-    # ../modules/nixos/hyprland.nix
+    ../modules/nixos/pipewire.nix
     ../modules/nixos/xdg-portals.nix
     ../modules/nixos/fish.nix
     ../modules/nixos/optimize.nix
@@ -101,16 +101,6 @@
 
     qt6.qtwayland
   ];
-
-  # Pipewire
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-    wireplumber.enable = true;
-    alsa.enable = true;
-    jack.enable = true;
-  };
 
   # Virtualisation
   virtualisation.libvirtd.enable = true;
