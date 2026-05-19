@@ -1,5 +1,5 @@
 {
-  description = "Nixos config flake";
+  description = "Minix config flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
@@ -10,6 +10,10 @@
     };
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    niri = {
+      url = "github:sodiboo/niri-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     auto-cpufreq = {
@@ -56,7 +60,6 @@
         home-manager.nixosModules.home-manager
         {
           home-manager.extraSpecialArgs = {inherit inputs system;};
-          home-manager.useUserPackages = true;
           home-manager.users.minze = import ./desktop/home.nix;
           home-manager.backupFileExtension = "bkphm";
           home-manager.sharedModules = [
@@ -76,7 +79,6 @@
         auto-cpufreq.nixosModules.default
         {
           home-manager.extraSpecialArgs = {inherit inputs;};
-          home-manager.useUserPackages = true;
           home-manager.users.minze = import ./laptop/home.nix;
           home-manager.backupFileExtension = "bkphm";
           home-manager.sharedModules = [

@@ -8,7 +8,8 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ../modules/nixos/nvidia.nix
-    ../modules/nixos/hyprland.nix
+    # ../modules/nixos/hyprland.nix
+    ../modules/nixos/xdg-portals.nix
     ../modules/nixos/fish.nix
     ../modules/nixos/optimize.nix
     ../modules/nixos/ssh.nix
@@ -105,6 +106,8 @@
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
+    pulse.enable = true;
+    wireplumber.enable = true;
     alsa.enable = true;
     jack.enable = true;
   };

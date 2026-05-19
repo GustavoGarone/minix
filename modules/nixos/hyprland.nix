@@ -1,17 +1,12 @@
 {pkgs, ...}: {
-  # XDG Portal
+  import = ./xdg-portals.nix:
   xdg.portal = {
-    enable = true;
     config = {
-      common.default = ["gtk"];
       hyprland.default = ["hyprland" "gtk"];
     };
     extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-hyprland
     ];
-    # configPackages = [ pkgs.xdg-desktop-portal-gtk ];
-    # extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
   # Session Variables
   environment.sessionVariables = {

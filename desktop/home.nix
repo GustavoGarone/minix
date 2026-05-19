@@ -2,7 +2,8 @@
   # Home Manager needs a bit of information about you and the paths it should
   # manager
   imports = [
-    ../modules/home-manager/hyprland.nix
+    # ../modules/home-manager/hyprland.nix
+    ../modules/home-manager/niri/default.nix
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/ghostty.nix

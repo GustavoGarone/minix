@@ -3,15 +3,17 @@
     playerctl
   ];
   programs.waybar = {
+    systemd.enable = true;
     enable = true;
     settings = {
       main = {
-        layer = "bottom";
+        layer = "top";
         position = "top";
         height = 30;
         modules-left = [
           "custom/os"
-          "hyprland/workspaces"
+          # "hyprland/workspaces"
+          "niri/workspaces"
         ];
         modules-center = [
           "clock"
