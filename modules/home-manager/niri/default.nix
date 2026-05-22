@@ -3,7 +3,10 @@
   inputs,
   ...
 }: {
-  home.packages = [pkgs.xwayland-satellite];
+  home.packages = with pkgs; [
+    xwayland-satellite
+    xdg-utils
+  ];
 
   imports = [
     ./polkit.nix

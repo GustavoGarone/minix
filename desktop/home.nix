@@ -6,7 +6,7 @@
     ../modules/home-manager/niri/default.nix
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
-    ../modules/home-manager/ghostty.nix
+    ../modules/home-manager/kitty.nix
     ../modules/home-manager/wofi.nix
     ../modules/home-manager/stylix.nix
     ../modules/home-manager/zen-browser.nix
@@ -103,8 +103,6 @@
   xdg.enable = true;
   xdg.mimeApps = {
     enable = true;
-    defaultApplications = {
-    };
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

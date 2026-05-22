@@ -4,6 +4,7 @@
     xdgOpenUsePortal = true;
     config = {
       common.default = ["gtk"];
+      niri.default = ["gnome" "gtk"];
     };
     extraPortals = [
       pkgs.xdg-desktop-portal-gtk

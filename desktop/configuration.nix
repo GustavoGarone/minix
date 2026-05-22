@@ -10,6 +10,7 @@
     ../modules/nixos/nvidia.nix
     ../modules/nixos/pipewire.nix
     ../modules/nixos/xdg-portals.nix
+    ../modules/nixos/niri.nix
     ../modules/nixos/fish.nix
     ../modules/nixos/optimize.nix
     ../modules/nixos/ssh.nix
