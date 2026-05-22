@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     zed.url = "github:zed-industries/zed";
     stylix = {
       url = "github:danth/stylix/release-25.11";
@@ -31,6 +32,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     minvim,
     zen-browser,
@@ -41,25 +43,30 @@
     ...
   } @ inputs: let
     system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      overlays = [
-        (final: prev: {
-          neovim = minvim.packages.${system}.default;
-        })
-      ];
-    };
+    inherit (self) outputs;
   in {
+    overlays = {
+      neovim = final: prev: {
+        neovim = minvim.packages.${system}.default;
+      };
+      unstable-packages = final: _prev: {
+        unstable = import nixpkgs-unstable {
+          system = final.system;
+          config.allowUnfree = true;
+        };
+      };
+    };
+
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
       specialArgs = {
-        inherit inputs;
+        inherit inputs system outputs;
       };
       modules = [
         ./desktop/configuration.nix
         stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
         {
-          home-manager.extraSpecialArgs = {inherit inputs system;};
+          home-manager.extraSpecialArgs = {inherit inputs system outputs;};
           home-manager.users.minze = import ./desktop/home.nix;
           home-manager.backupFileExtension = "bkphm";
           home-manager.sharedModules = [
@@ -70,15 +77,16 @@
         }
       ];
     };
+
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs system;};
+      specialArgs = {inherit inputs system outputs;};
       modules = [
         ./laptop/configuration.nix
         stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
         auto-cpufreq.nixosModules.default
         {
-          home-manager.extraSpecialArgs = {inherit inputs;};
+          home-manager.extraSpecialArgs = {inherit inputs system outputs;};
           home-manager.users.minze = import ./laptop/home.nix;
           home-manager.backupFileExtension = "bkphm";
           home-manager.sharedModules = [
