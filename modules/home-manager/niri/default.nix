@@ -76,6 +76,13 @@
           ];
           block-out-from = "screencast";
         }
+        {
+          matches = [
+            {app-id = "steam_app_.*";}
+          ];
+          open-fullscreen = true;
+          variable-refresh-rate = true;
+        }
       ];
     };
   };
