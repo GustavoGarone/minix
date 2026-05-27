@@ -92,7 +92,6 @@ in {
     kdePackages.kclock
     koodo-reader
     croc
-    zotero
     pavucontrol
     librewolf
     hyprpicker
