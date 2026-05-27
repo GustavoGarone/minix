@@ -7,7 +7,11 @@
   };
 
   # Zram swap
-  zramSwap.enable = true;
+  zramSwap = {
+    enable = true;
+    priority = 100;
+    memoryPercent = 50;
+  };
 
   # Enable Direnv
   programs.direnv.enable = true;
@@ -28,4 +32,7 @@
   # services.earlyoom = {
   #   enable = true;
   # };
+
+  # Disables access-time writing
+  fileSystems."/".options = ["noatime"];
 }
