@@ -1,6 +1,12 @@
 {
+  pkgs,
+  outputs,
+  ...
+}: {
+  nixpkgs.overlays = [outputs.overlays.unstable-packages];
   programs.zed-editor = {
     enable = true;
+    package = pkgs.unstable.zed-editor;
 
     extensions = [
       "html"
