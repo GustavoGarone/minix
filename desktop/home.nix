@@ -90,6 +90,7 @@
     cmatrix
     prismlauncher
     fastfetch
+    r2modman
 
     # TODO: create a script for updating flakes and switching home-manager (do the same for sys)
     # # You can also create simple shell scripts directly inside your
