@@ -109,17 +109,10 @@
     gfortran.cc.lib
     libgccjit
     gnumake
-    cmake
-    extra-cmake-modules
 
     #xdg
     # xdg-utils
     # dconf
-
-    qt6.qtwayland
-    # libsForQt5.qt5.qtwayland
-    # hunspell
-    # hunspellDicts.pt_BR
   ];
 
   # Pipewire
