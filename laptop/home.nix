@@ -1,20 +1,8 @@
-{pkgs, ...}: let
-  # Custom R Packages
-  ark = pkgs.fetchFromGitHub {
-    owner = "posit-dev";
-    repo = "ark";
-    rev = "latest";
-    sha256 = "sha256-hRfB/AvRUWJfO96kESbU+jyCc+zl/5NB870STOGRF9k=";
-  };
-in {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manager
+{pkgs, ...}: {
   imports = [
-    # ../modules/home-manager/hyprland.nix
     ../modules/home-manager/niri/default.nix
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
-    # ../modules/home-manager/ghostty.nix
     ../modules/home-manager/kitty.nix
     ../modules/home-manager/wofi.nix
     ../modules/home-manager/stylix.nix
@@ -24,6 +12,7 @@ in {
     ../modules/home-manager/waybar.nix
     ../modules/home-manager/wallpaper.nix
     ../modules/home-manager/helix.nix
+    ../modules/home-manager/zed.nix
     ../modules/home-manager/julia.nix
     ../modules/home-manager/R.nix
     ../modules/home-manager/python.nix
