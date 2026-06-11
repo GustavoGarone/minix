@@ -2,7 +2,6 @@
   # Home Manager needs a bit of information about you and the paths it should
   # manager
   imports = [
-    # ../modules/home-manager/hyprland.nix
     ../modules/home-manager/niri/default.nix
     ../modules/home-manager/fish.nix
     ../modules/home-manager/git.nix
@@ -67,7 +66,6 @@
     qbittorrent
     mpv
     ffmpeg
-    loupe
     obsidian
     koodo-reader
     tokei
@@ -80,7 +78,7 @@
     kdePackages.dolphin
     kdePackages.kclock
     dragon-drop
-    rnote
+    pinta
     croc
     pavucontrol
     hyprpicker

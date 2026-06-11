@@ -5,6 +5,5 @@
     pulse.enable = true;
     wireplumber.enable = true;
     alsa.enable = true;
-    jack.enable = true;
   };
 }
