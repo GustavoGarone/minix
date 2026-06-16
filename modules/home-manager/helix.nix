@@ -105,6 +105,16 @@
         language-servers = ["superhtml"];
       }
       {
+        name = "typescript";
+        auto-format = true;
+        language-servers = ["typescript-language-server" "biome"];
+      }
+      {
+        name = "astro";
+        auto-format = true;
+        language-servers = ["typescript-language-server" "biome"];
+      }
+      {
         name = "markdown";
         auto-format = true;
         # formatter.command = "mdformat";
@@ -119,6 +129,10 @@
       air = {
         command = "air";
         args = ["language-server"];
+      };
+      biome = {
+        command = "biome";
+        args = ["lsp-proxy"];
       };
     };
   };
