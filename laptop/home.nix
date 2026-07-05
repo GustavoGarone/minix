@@ -21,6 +21,7 @@
     ../modules/home-manager/zellij.nix
     ../modules/home-manager/copyq.nix
     ../modules/home-manager/matrix.nix
+    ../modules/home-manager/tidal.nix
   ];
 
   home.username = "minze";
@@ -62,7 +63,6 @@
     # General Software
     qbittorrent
     mpv
-    inkscape
     tomato-c
     krita
     loupe
@@ -126,6 +126,15 @@
     QT_QPA_PLATFORM = "wayland;xcb";
     R_HOME = "${pkgs.R}/lib/R";
     # LD_LIBRARY_PATH = "${pkgs.R}/lib/R/lib:$LD_LIBRARY_PATH";
+  };
+
+  programs.niri.settings = {
+    outputs = {
+      "HDMI-A-1" = {
+        position.x = 0;
+        position.y = 0;
+      };
+    };
   };
 
   # Let Home Manager install and manage itself.

@@ -35,7 +35,7 @@
       };
 
       hotkey-overlay.skip-at-startup = false;
-      screenshot-path = "~/pictures/screenshots/%Y-%m-%d %H-%M-%S.png";
+      screenshot-path = "~/Pictures/screenshots/%Y-%m-%d %H-%M-%S.png";
 
       environment."NIXOS_OZONE_WL" = "1";
 

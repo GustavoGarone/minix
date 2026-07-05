@@ -12,6 +12,7 @@
     # ../modules/nixos/auto-cpufreq.nix
     ../modules/nixos/tlp.nix
     ../modules/nixos/pipewire.nix
+    ../modules/nixos/niri.nix
     ../modules/nixos/xdg-portals.nix
     ../modules/nixos/fish.nix
     ../modules/nixos/optimize.nix
