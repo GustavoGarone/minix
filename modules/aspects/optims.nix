@@ -1,5 +1,5 @@
 {
-  den.aspects.nix = {
+  den.aspects.optims = {
     nixos = {
       nix.settings.auto-optimise-store = true;
       nix.gc = {

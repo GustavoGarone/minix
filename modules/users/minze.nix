@@ -10,6 +10,7 @@
       "user"
       "wheel"
       "networkmanager"
+      "gamemode"
     ];
   };
 in {
