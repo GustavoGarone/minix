@@ -19,7 +19,7 @@
   den.aspects.laptop = {
     includes = with den.aspects; [
       stylix
-      nix
+      optims
       xdg
 
       desktop-environments.niri
@@ -41,13 +41,6 @@
     ];
 
     nixos = {
-      host,
-      pkgs,
-      ...
-    }: {
-      services.xserver.xkb.layout = host.keyboardLayout;
-      console.useXkbConfig = true;
-
       networking.networkmanager.enable = true;
 
       hardware.bluetooth = {

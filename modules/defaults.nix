@@ -8,7 +8,7 @@
       den.batteries.host-aspects
     ];
 
-    nixos = {
+    nixos = {host}: {
       boot.loader = {
         systemd-boot.enable = true;
         efi.canTouchEfiVariables = true;
@@ -21,6 +21,9 @@
       time.timeZone = "America/Sao_Paulo";
 
       programs.gnupg.agent.enable = true;
+
+      services.xserver.xkb.layout = host.keyboardLayout;
+      console.useXkbConfig = true;
 
       i18n.defaultLocale = "en_US.UTF-8";
       i18n.extraLocaleSettings = {
