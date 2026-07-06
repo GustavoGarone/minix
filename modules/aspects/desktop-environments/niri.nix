@@ -40,6 +40,11 @@
         inputs.niri.homeModules.stylix
       ];
 
+      home.packages = with pkgs; [
+        grimblast
+        hyprpicker
+      ];
+
       programs.niri = {
         enable = true;
         package = pkgs.niri;
@@ -58,6 +63,8 @@
                 options = "grp:win_space_toggle";
               };
               numlock = true;
+              repeat-delay = 140;
+              repeat-rate = 45;
             };
 
             mouse.accel-profile = "flat";
@@ -68,6 +75,7 @@
 
           layout = {
             gaps = 6;
+            empty-workspace-above-first = true;
 
             preset-column-widths = [
               {proportion = 1. / 3.;}
@@ -93,7 +101,7 @@
           window-rules = [
             {
               geometry-corner-radius = let
-                radius = 12.;
+                radius = 6.;
               in {
                 bottom-left = radius;
                 bottom-right = radius;
@@ -106,6 +114,7 @@
             {
               matches = [
                 {title = "Proton Pass";}
+                {title = "WhatsApp";}
                 {app-id = "io.ente.auth";}
                 {app-id = "org.telegram.desktop";}
               ];

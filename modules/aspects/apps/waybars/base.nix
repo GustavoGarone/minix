@@ -14,8 +14,8 @@
         settings = {
           main = {
             layer = "top";
-            position = "right";
-            width = 30;
+            position = "top";
+            height = 30;
             fixed-center = true;
             spacing = 10;
 
@@ -46,6 +46,7 @@
                 active = "■";
                 default = "□";
               };
+              hide-empty = true;
             };
             "niri/language" = {
               format-pt = "br";
@@ -62,9 +63,12 @@
                 warning = 30;
                 critical = 15;
               };
-              format = "{icon}";
+              format = "{capacity}% {icon}";
               tooltip-format = "{capacity}% ({timeTo})";
-              format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+              format-icons = {
+                default = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+                charging = ["󰢟" "󰢜" "󰂆" "󰂇" "󰂈" "󰢝" "󰂉" "󰢞" "󰂊" "󰂋" "󰂅"];
+              };
               format-time = "{H}h {M}m";
               max-length = 25;
             };
@@ -73,10 +77,10 @@
               format-disconnected = "";
             };
             clock = {
-              format = "{:%H\n%M}";
-              format-alt = "{:%H\n%M}";
+              format = "{:%H:%M}";
+              format-alt = "{:%H:%M}";
               tooltip-format = "<tt>{calendar}</tt>";
-              locale = "en_US.UTF-8";
+              locale = "pt_BR.UTF-8";
               calendar = {
                 mode-mon-col = 3;
                 format = {
@@ -105,12 +109,8 @@
               tooltip = false;
             };
             "backlight/slider" = {
-              orientation = "vertical";
-            };
-            "group/brightness" = {
-              "orientation" = "inherit";
-              modules = ["custom/sun" "backlight/slider"];
-              drawer.transition-left-to-right = false;
+              min = 1;
+              orientation = "horizontal";
             };
             "pulseaudio" = {
               format = "󰕾  {volume}%";
@@ -123,7 +123,6 @@
               format = "{artist} {status_icon} {title}";
               format-paused = "{artist} {status_icon} {title}";
               interval = 1;
-              rotate = 270;
               status-icons = {
                 playing = " ";
                 paused = " ";
@@ -134,45 +133,35 @@
         };
 
         style = ''
-          window#waybar {
-            background-color: @base00;
-            color: @base05;
+          * {
+            border: none;
+            border-radius: 0;
+            font-family: Nunito, Symbols-Only;
           }
 
-          .modules-left,
-          .modules-center,
-          .modules-right {
-            margin-top: 0px;
-          }
-
-          .modules-left {
-            padding-top: 5px;
+          .modules-center {
+            background-color: rgba(0,0,0,0);
           }
 
           .modules-right {
-            padding-bottom: 5px;
+            padding: 0px 2px;
           }
 
-          #workspaces {
-            margin-bottom: 5px;
+          #clock {
+            font-weight: bold;
           }
 
-          #workspaces button {
-            all: unset;
-            padding-right: 0px;
-            margin-bottom: 0px;
-            font-size: 12px;
-            transition: all .1s ease;
-            opacity: 0.5;
+          #network.disconnected {
+            opacity: 0.5
           }
 
-          #workspaces button.active {
-            opacity: 1;
+          .modules-right > * > * {
+            margin: 0px 5px;
           }
 
           #backlight-slider slider {
-            min-height: 0;
-            min-width: 0;
+            min-height: 0px;
+            min-width: 0px;
             opacity: 0;
             background-image: none;
             border: none;
@@ -181,28 +170,18 @@
           }
 
           #backlight-slider trough {
-            min-width: 10px;
-            min-height: 80px;
-            background: @base01;
-            border: 0;
-            border-radius: 0;
+            min-height: 10px;
+            min-width: 80px;
+            border-radius: 5px;
+            background: black;
           }
 
           #backlight-slider highlight {
-            min-height: 10px;
             min-width: 10px;
-            border-radius: 0;
-            background: @base05;
-            border: 0;
+            border-radius: 5px;
+            background: #f9ebd8;
           }
 
-          #battery .charging {
-            color: @base0B;
-          }
-
-          #tray * {
-            border-radius: 0;
-          }
         '';
       };
     };

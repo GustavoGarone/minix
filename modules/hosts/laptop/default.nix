@@ -7,6 +7,7 @@
         refresh = 120.213;
         width = 1920;
         height = 1080;
+        x = 1920;
       };
       HDMI-A-1 = {
         refresh = 60.000;
@@ -23,10 +24,11 @@
       utils
       xdg
 
-      desktop-environments.niri
+      desktop-environments.niri.with-waybar
 
       development.git
       development.direnv
+      editors.helix
       terminals.kitty
       shells.fish
 
@@ -43,12 +45,17 @@
     ];
 
     nixos = {
+      system.stateVersion = "23.11"; # Did you read the comment?
+
       networking.networkmanager.enable = true;
 
       hardware.bluetooth = {
         enable = true;
         settings.General.Experimental = true;
       };
+    };
+    homeManager = {
+      home.stateVersion = "23.11"; # Please read the comment before changing.
     };
   };
 }

@@ -3,8 +3,8 @@
     homeManager = {
       programs.waybar.settings.main = {
         modules-right = [
-          "tray"
           "mpris"
+          "tray"
           "privacy"
           "network"
           "bluetooth"

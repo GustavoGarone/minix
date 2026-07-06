@@ -30,7 +30,7 @@
         home.packages = with pkgs; [
           dragon-drop
           mpv
-          dolphin
+          kdePackages.dolphin
           pinta
         ];
       };

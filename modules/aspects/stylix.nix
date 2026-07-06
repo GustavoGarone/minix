@@ -20,29 +20,27 @@
         cursor = {
           package = pkgs.bibata-cursors;
           name = "Bibata-Modern-Classic";
-          size = 24;
+          size = 14;
         };
 
         fonts = {
-          sizes.popups = 12;
+          sizes.popups = 10;
           sansSerif = {
             package = pkgs.texlivePackages.nunito;
             name = "Nunito";
           };
           monospace = {
-            package = pkgs.nerd-fonts.jetbrains-mono;
-            name = "JetBrainsMono Nerd Font";
+            package = pkgs.nerd-fonts.victor-mono;
+            name = "VictorMono NF";
           };
         };
       };
     };
 
     homeManager = {pkgs, ...}: {
-      # remove warning from home-manager.
-      gtk.gtk4.theme = null;
-
       stylix = {
         enable = true;
+        fonts.sizes.desktop = 10;
         targets = {
           waybar = {
             font = "sansSerif";
@@ -54,7 +52,7 @@
           wofi.fonts.override.monospace.name = "Nunito";
           obsidian.fonts.override.sizes.applications = 14;
           helix.opacity.override.terminal = 0;
-          nvf.transparentBackground = true;
+          gtk.extraCss = "*{border-radius:0px;}";
         };
       };
     };

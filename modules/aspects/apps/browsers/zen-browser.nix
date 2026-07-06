@@ -20,6 +20,7 @@
         "jobcentertycoon@gmail.com" = "cookie-auto-decline";
       };
     in {
+      imports = [inputs.zen-browser.homeModules.beta];
       stylix.targets.zen-browser.profileNames = ["minze"];
 
       programs.zen-browser = {

@@ -1,5 +1,5 @@
 {
-  den.aspects.utils = {
+  den.aspects.utils = {host}: {
     homeManager = {pkgs, ...}: {
       home.packages = with pkgs; [
         uutils-coreutils-noprefix
@@ -11,7 +11,7 @@
         bat
       ];
 
-      options.home.shellAliases = {
+      home.shellAliases = {
         ls = "eza --icons=auto";
         ll = "eza --icons=auto -l";
         tree = "eza --icons=auto -T";

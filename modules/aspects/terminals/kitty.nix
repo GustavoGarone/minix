@@ -1,4 +1,4 @@
-{
+{lib, ...}: {
   den.aspects.terminals.kitty = {host}: {
     homeManager = {
       programs.kitty = {
@@ -19,6 +19,9 @@
           resize_in_steps = true;
 
           shell = host.shell;
+        };
+        font = {
+          size = lib.mkForce 10.0;
         };
 
         shellIntegration = {
