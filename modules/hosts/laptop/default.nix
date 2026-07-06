@@ -1,6 +1,7 @@
 {den, ...}: {
   den.hosts.x86_64-linux.laptop = {
     isLaptop = true;
+    gitSigningKey = "8EC0399DAED73E80";
     displays = {
       eDP-1 = {
         primary = true;
