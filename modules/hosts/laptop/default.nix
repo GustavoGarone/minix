@@ -20,6 +20,7 @@
     includes = with den.aspects; [
       stylix
       optims
+      utils
       xdg
 
       desktop-environments.niri
@@ -35,6 +36,7 @@
       apps.fastfetch
       apps.mpv
       apps.btop
+      apps.zellij
       apps.yazi
 
       services.auto-cpufreq

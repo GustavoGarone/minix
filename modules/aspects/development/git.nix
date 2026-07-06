@@ -98,7 +98,7 @@
           };
         };
       };
-      home.options.shellAliases = {
+      home.shellAliases = {
         gs = "git status --short";
         gc = "git commit";
         gl = "git log --graph --all --pretty=format:\"%C(magenta)%h %C(white) %an  %ar%C(auto)  %D%n%s%n\"";

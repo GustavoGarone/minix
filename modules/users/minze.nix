@@ -26,7 +26,6 @@ in {
 
     homeManager = {pkgs, ...}: {
       home.packages = with pkgs; [
-        dolphin
         tidal-hifi
         proton-pass
       ];
