@@ -8,8 +8,12 @@
       )
     ];
 
-    homeManager = {
+    homeManager = {pkgs, ...}: {
+      home.packages = with pkgs; [
+        pavucontrol
+      ];
       programs.waybar = {
+        systemd.enable = true;
         enable = true;
         settings = {
           main = {
@@ -73,8 +77,8 @@
               max-length = 25;
             };
             network = {
-              format = "";
-              format-disconnected = "";
+              format = " ";
+              format-disconnected = " ";
             };
             clock = {
               format = "{:%H:%M}";
