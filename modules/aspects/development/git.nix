@@ -5,9 +5,10 @@
     };
 
     homeManager = {pkgs, ...}: {
-      home.packages = [
-        pkgs.git-credential-manager
-        pkgs.delta
+      home.packages = with pkgs; [
+        git-credential-manager
+        delta
+        lazygit
       ];
 
       programs.gh = {
