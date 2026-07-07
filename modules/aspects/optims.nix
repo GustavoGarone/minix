@@ -14,8 +14,6 @@
         memoryPercent = 50;
       };
 
-      services.earlyoom.enable = true;
-
       services.thermald.enable = true;
 
       fileSystems."/".options = ["noatime"];
