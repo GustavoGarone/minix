@@ -7,7 +7,6 @@
           "tray"
           "privacy"
           "network"
-          "bluetooth"
           "pulseaudio"
           "backlight/slider"
           "battery"

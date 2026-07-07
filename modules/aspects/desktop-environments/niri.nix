@@ -95,6 +95,7 @@
             # niri for some reason does not auto-start the polkit agent.
             {argv = ["${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"];}
             {argv = ["awww-daemon"];}
+            {argv = ["systemctl --user reset-failed waybar.service"];}
           ];
           prefer-no-csd = true;
 

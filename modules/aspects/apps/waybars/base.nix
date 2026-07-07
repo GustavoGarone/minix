@@ -123,10 +123,15 @@
               format = "{artist} {status_icon} {title}";
               format-paused = "{artist} {status_icon} {title}";
               interval = 1;
+              player-icons = {
+                chromium = " 󰼮 ";
+                firefox = "  ";
+                default = "  ";
+              };
               status-icons = {
-                playing = " ";
-                paused = " ";
-                stopped = " ";
+                playing = "  ";
+                paused = "  ";
+                stopped = "  ";
               };
             };
           };
