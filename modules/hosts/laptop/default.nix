@@ -24,6 +24,7 @@
       optims
       utils
       xdg
+      gaming
 
       desktop-environments.niri.with-waybar
 
