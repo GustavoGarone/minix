@@ -28,7 +28,11 @@ in {
       home.packages = with pkgs; [
         tidal-hifi
         proton-pass
+        julia
       ];
+      home.sessionVariables = {
+        EDITOR = "hx";
+      };
     };
   };
 
