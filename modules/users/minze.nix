@@ -29,6 +29,7 @@ in {
         tidal-hifi
         proton-pass
         julia
+        libreoffice
       ];
       home.sessionVariables = {
         EDITOR = "hx";
