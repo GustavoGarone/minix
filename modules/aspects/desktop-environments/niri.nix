@@ -288,9 +288,6 @@
       ];
 
       homeManager.programs.niri.settings = {
-        spawn-at-startup = lib.mkAfter [
-          {argv = ["waybar"];}
-        ];
         binds = {
           "Mod+R" = {
             hotkey-overlay.title = "Open launcher";
