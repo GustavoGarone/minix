@@ -1,14 +1,16 @@
 {
   den.aspects.optims = let
-    garbage-collection = {
-      automatic = true;
-      dates = "15d";
-      options = "--delete-older-than 15d";
+    nix = {
+      gc = {
+        automatic = true;
+        dates = "15d";
+        options = "--delete-older-than 15d";
+      };
+      settings.auto-optimise-store = true;
     };
   in {
     nixos = {
-      nix.settings.auto-optimise-store = true;
-      nix.gc = {inherit garbage-collection;};
+      nix.gc = {inherit nix;};
 
       zramSwap = {
         enable = true;
@@ -21,7 +23,7 @@
       fileSystems."/".options = ["noatime"];
     };
     home-manager = {
-      nix.gc = {inherit garbage-collection;};
+      nix = {inherit nix;};
     };
   };
 }
