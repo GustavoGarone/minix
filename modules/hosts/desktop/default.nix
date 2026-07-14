@@ -36,6 +36,7 @@
       apps.btop
       apps.zellij
       apps.yazi
+      apps.proton-vpn
 
       services.auto-cpufreq
     ];
