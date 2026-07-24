@@ -3,6 +3,13 @@
     nixos = {pkgs, ...}: {
       environment.systemPackages = with pkgs; [
         mangohud
+        (heroic.override {
+          extraPkgs = pkgs':
+            with pkgs'; [
+              gamescope
+              gamemode
+            ];
+        })
       ];
 
       programs.steam = {
@@ -18,6 +25,7 @@
       };
 
       programs.gamemode.enable = true;
+      programs.gamescope.enable = true;
     };
   };
 }
