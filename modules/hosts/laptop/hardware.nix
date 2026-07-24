@@ -22,6 +22,11 @@
     hardware.enableRedistributableFirmware = true;
     services.xserver.videoDrivers = ["modesetting"];
 
+    boot.loader = {
+      systemd-boot.enable = true;
+      efi.canTouchEfiVariables = true;
+    };
+
     # From hardware-configuration.nix =========================================
     imports = [
       (modulesPath + "/installer/scan/not-detected.nix")

@@ -9,11 +9,6 @@
     ];
 
     nixos = {host}: {
-      boot.loader = {
-        systemd-boot.enable = true;
-        efi.canTouchEfiVariables = true;
-      };
-
       nixpkgs.config.allowUnfree = true;
 
       networking.hostName = "den";

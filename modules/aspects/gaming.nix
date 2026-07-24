@@ -10,6 +10,7 @@
               gamemode
             ];
         })
+        protonup-rs
       ];
 
       programs.steam = {

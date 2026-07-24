@@ -30,6 +30,7 @@ in {
         proton-pass
         julia
         libreoffice
+        qbittorrent
       ];
       home.sessionVariables = {
         EDITOR = "hx";

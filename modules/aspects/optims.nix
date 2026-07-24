@@ -10,8 +10,7 @@
     };
   in {
     nixos = {
-      nix.gc = {inherit nix;};
-
+      inherit nix;
       zramSwap = {
         enable = true;
         priority = 100;
@@ -23,7 +22,7 @@
       fileSystems."/".options = ["noatime"];
     };
     home-manager = {
-      nix = {inherit nix;};
+      inherit nix;
     };
   };
 }
