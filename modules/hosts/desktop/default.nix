@@ -24,6 +24,7 @@
 
       development.git
       development.direnv
+      development.postgresql
       editors.helix
       terminals.kitty
       shells.fish
