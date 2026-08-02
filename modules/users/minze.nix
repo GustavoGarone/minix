@@ -30,6 +30,7 @@ in {
         proton-pass
         julia
         libreoffice
+        codex
         qbittorrent
       ];
       home.sessionVariables = {
