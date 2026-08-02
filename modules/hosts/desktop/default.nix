@@ -38,6 +38,7 @@
       apps.zellij
       apps.yazi
       apps.proton-vpn
+      apps.gsr
 
       services.auto-cpufreq
     ];
