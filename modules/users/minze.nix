@@ -1,5 +1,5 @@
 {
-  __findFile,
+  inputs,
   den,
   ...
 }: let
@@ -16,15 +16,25 @@
 in {
   den.aspects.${user} = {
     includes = [
-      <den/primary-user>
-      (<den/user-shell> "fish")
-      (<den/unfree> [
+      den.batteries.primary-user
+      (den.batteries.user-shell "fish")
+      (den.batteries.unfree [
         "castlabs-electron" # for tidal-hifi
       ])
       den.aspects.apps.core.gui
     ];
 
-    homeManager = {pkgs, ...}: {
+    homeManager = {pkgs, ...}: let
+      unstable = import inputs.nixpkgs-unstable {
+        system = pkgs.stdenv.hostPlatform.system;
+        config = {
+          allowUnfree = true;
+          permittedInsecurePackages = [
+            "electron-38.8.4"
+          ];
+        };
+      };
+    in {
       home.packages = with pkgs; [
         tidal-hifi
         proton-pass
@@ -32,6 +42,7 @@ in {
         libreoffice
         codex
         qbittorrent
+        unstable.stoat-desktop
       ];
       home.sessionVariables = {
         EDITOR = "hx";
