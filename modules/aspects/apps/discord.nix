@@ -26,7 +26,6 @@
             fakeNitro.enable = true;
             fixYoutubeEmbeds.enable = true;
             friendInvites.enable = true;
-            friendsSince.enable = true;
             gifPaste.enable = true;
             mentionAvatars.enable = true;
             messageClickActions.enable = true;

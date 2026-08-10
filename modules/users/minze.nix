@@ -40,7 +40,7 @@ in {
         proton-pass
         julia
         libreoffice
-        codex
+        unstable.codex
         qbittorrent
         unstable.stoat-desktop
       ];
