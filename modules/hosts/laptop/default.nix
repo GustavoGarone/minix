@@ -55,6 +55,8 @@
         enable = true;
         settings.General.Experimental = true;
       };
+
+      services.thermald.enable = true;
     };
     homeManager = {
       home.stateVersion = "23.11"; # Please read the comment before changing.
