@@ -9,7 +9,7 @@
             turbo = "never";
           };
           charger = {
-            gorvernor = "performance";
+            governor = "performance";
             turbo = "auto";
           };
         };
