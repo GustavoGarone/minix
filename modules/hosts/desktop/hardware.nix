@@ -12,8 +12,12 @@
       enable = true;
       enable32Bit = true;
       extraPackages = with pkgs; [
-        libvdpau-va-gl
+        nvidia-vaapi-driver
       ];
+    };
+    environment.sessionVariables = {
+      LIBVA_DRIVER_NAME = "nvidia";
+      NVD_BACKEND = "direct";
     };
     hardware.nvidia = {
       open = false;

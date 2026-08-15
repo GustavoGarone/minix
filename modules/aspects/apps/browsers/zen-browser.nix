@@ -47,6 +47,9 @@
           settings = {
             "media.videocontrols.picture-in-picture.video-toggle.enabled" = false;
             "browser.tabs.hoverPreview.enabled" = true;
+            "media.hardware-video-decoding.force-enabled" = true;
+            "media.ffmpeg.vaapi.enabled" = true;
+            "media.av1.enabled" = false;
 
             "zen.urlbar.behavior" = "float";
             "zen.workspaces.separate-essentials" = false;
