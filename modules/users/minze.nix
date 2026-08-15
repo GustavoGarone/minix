@@ -38,6 +38,7 @@ in {
       home.packages = with pkgs; [
         tidal-hifi
         proton-pass
+        telegram-desktop
         julia
         libreoffice
         unstable.codex
