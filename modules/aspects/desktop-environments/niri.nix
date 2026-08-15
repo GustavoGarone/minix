@@ -11,6 +11,8 @@
     ];
 
     nixos = {pkgs, ...}: {
+      security.pam.services.hyprlock = {};
+
       programs.niri.enable = true;
 
       environment.systemPackages = with pkgs; [
@@ -159,6 +161,7 @@
               action.spawn = ["wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "2%-"];
             };
             "Mod+P".action.spawn = ["hyprpicker" "-a"];
+            "Mod+Shift+Alt+R".action.spawn = ["hyprlock"];
             "Mod+Left".action.focus-column-left = [];
             "Mod+Down".action.focus-window-or-workspace-down = [];
             "Mod+Up".action.focus-window-or-workspace-up = [];
@@ -254,6 +257,28 @@
             "Mod+Shift+7".action.move-column-to-workspace = 7;
             "Mod+Shift+8".action.move-column-to-workspace = 8;
             "Mod+Shift+9".action.move-column-to-workspace = 9;
+          };
+        };
+      };
+
+      programs.hyprlock = {
+        enable = true;
+        settings = {
+          general = {
+            hide_cursor = true;
+            ignore_empty_input = true;
+          };
+
+          animations = {
+            enabled = true;
+            fade_in = {
+              duration = 300;
+              bezier = "easeOutQuint";
+            };
+            fade_out = {
+              duration = 300;
+              bezier = "easeOutQuint";
+            };
           };
         };
       };
