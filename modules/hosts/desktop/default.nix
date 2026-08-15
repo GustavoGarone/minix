@@ -1,6 +1,5 @@
 {den, ...}: {
   den.hosts.x86_64-linux.desktop = {
-    isLaptop = true;
     gitSigningKey = "A689A86A2F82A235";
     displays = {
       HDMI-A-1 = {
@@ -39,8 +38,6 @@
       apps.yazi
       apps.proton-vpn
       apps.gsr
-
-      services.auto-cpufreq
     ];
 
     nixos = {
