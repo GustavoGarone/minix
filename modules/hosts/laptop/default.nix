@@ -44,6 +44,7 @@
       apps.yazi
 
       services.auto-cpufreq
+      services.syncthing
     ];
 
     nixos = {

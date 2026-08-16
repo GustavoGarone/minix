@@ -38,6 +38,8 @@
       apps.yazi
       apps.proton-vpn
       apps.gsr
+
+      services.syncthing
     ];
 
     nixos = {
