@@ -41,7 +41,8 @@ in {
         telegram-desktop
         julia
         libreoffice
-        unstable.codex
+        foliate
+        inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
         qbittorrent
         unstable.stoat-desktop
       ];

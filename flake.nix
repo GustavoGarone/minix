@@ -7,6 +7,10 @@
     nixpkgs-lib.follows = "nixpkgs";
     import-tree.url = "github:denful/import-tree";
     den.url = "github:denful/den";
+    codex-cli-nix = {
+      url = "github:sadjow/codex-cli-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     flake-parts = {
       inputs.nixpkgs-lib.follows = "nixpkgs-lib";
       url = "github:hercules-ci/flake-parts";
