@@ -7,11 +7,19 @@
   cfg = {
     classes = [
       "homeManager"
-      "user"
-      "wheel"
-      "networkmanager"
-      "gamemode"
     ];
+    nixos = {
+      users.users.${user} = {
+        isNormalUser = true;
+        description = user;
+        extraGroups = [
+          "user"
+          "wheel"
+          "networkmanager"
+          "gamemode"
+        ];
+      };
+    };
   };
 in {
   den.aspects.${user} = {
