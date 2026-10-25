@@ -38,6 +38,7 @@
       apps.yazi
       apps.proton-vpn
       apps.gsr
+      apps.polyphone
       apps.claude-code
       apps.claude-desktop
 
