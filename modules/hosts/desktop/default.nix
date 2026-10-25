@@ -39,6 +39,7 @@
       apps.proton-vpn
       apps.gsr
       apps.polyphone
+      apps.pianoteq
       apps.claude-code
       apps.claude-desktop
 
