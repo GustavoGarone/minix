@@ -45,6 +45,7 @@
       home.packages = with pkgs; [
         grimblast
         hyprpicker
+        wl-clipboard
       ];
 
       programs.niri = {
