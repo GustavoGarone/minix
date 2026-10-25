@@ -38,6 +38,8 @@
       apps.yazi
       apps.proton-vpn
       apps.gsr
+      apps.claude-code
+      apps.claude-desktop
 
       services.syncthing
     ];
