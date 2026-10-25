@@ -52,6 +52,7 @@ in {
         foliate
         inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
         qbittorrent
+        poppler-utils
         unstable.stoat-desktop
       ];
       home.sessionVariables = {
