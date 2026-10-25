@@ -46,6 +46,7 @@
 
       services.syncthing
       services.sunshine
+      services.zerotier
     ];
 
     nixos = {
