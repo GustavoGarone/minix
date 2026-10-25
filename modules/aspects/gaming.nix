@@ -11,6 +11,7 @@
             ];
         })
         protonup-rs
+        r2modman
       ];
 
       programs.steam = {
