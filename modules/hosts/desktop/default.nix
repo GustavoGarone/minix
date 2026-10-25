@@ -45,6 +45,7 @@
       apps.claude-desktop
 
       services.syncthing
+      services.sunshine
     ];
 
     nixos = {
