@@ -40,6 +40,7 @@
       apps.gsr
       apps.polyphone
       apps.pianoteq
+      apps.prismlauncher
       apps.claude-code
       apps.claude-desktop
 
