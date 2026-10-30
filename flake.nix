@@ -19,6 +19,10 @@
       url = "github:poeck/claude-desktop-nix-flake";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    claude-science-nix = {
+      url = "github:GustavoGarone/claude-science-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     flake-parts = {
       inputs.nixpkgs-lib.follows = "nixpkgs-lib";
       url = "github:hercules-ci/flake-parts";

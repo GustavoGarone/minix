@@ -43,6 +43,7 @@
       apps.prismlauncher
       apps.claude-code
       apps.claude-desktop
+      apps.claude-science
 
       services.syncthing
       services.sunshine

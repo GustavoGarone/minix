@@ -5,6 +5,12 @@
     ];
   };
 
+  den.aspects.apps.claude-science.homeManager = {pkgs, ...}: {
+    home.packages = [
+      inputs.claude-science-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
+    ];
+  };
+
   den.aspects.apps.claude-desktop.nixos = {pkgs, ...}: {
     imports = [inputs.claude-desktop-nix-flake.nixosModules.default];
     programs.claude-desktop = {

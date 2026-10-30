@@ -129,6 +129,26 @@
         "type": "github"
       }
     },
+    "claude-science-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793322518,
+        "narHash": "sha256-kjSMLbQ1kZJ++3r04xOrVAut2bSMIsLTuzQMFijF0+8=",
+        "owner": "GustavoGarone",
+        "repo": "claude-science-nix",
+        "rev": "c0ce96171a6c185e7156cb2b671194123fad7a31",
+        "type": "github"
+      },
+      "original": {
+        "owner": "GustavoGarone",
+        "repo": "claude-science-nix",
+        "type": "github"
+      }
+    },
     "codex-cli-nix": {
       "inputs": {
         "flake-utils": "flake-utils",
@@ -568,6 +588,7 @@
         "auto-cpufreq": "auto-cpufreq",
         "claude-code-nix": "claude-code-nix",
         "claude-desktop-nix-flake": "claude-desktop-nix-flake",
+        "claude-science-nix": "claude-science-nix",
         "codex-cli-nix": "codex-cli-nix",
         "den": "den",
         "flake-parts": "flake-parts",
