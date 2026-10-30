@@ -3,15 +3,17 @@
     homeManager = {pkgs, ...}: {
       home.packages = with pkgs; [
         any-nix-shell # compatibility for `nix run` and `nix-shell`
-        zoxide
       ];
+
+      programs.zoxide = {
+        enable = true;
+        options = ["--cmd" "cd"];
+      };
 
       programs.fish = {
         enable = true;
         interactiveShellInit = ''
           set fish_greeting
-          direnv hook fish | source
-          zoxide init --cmd cd fish | source
         '';
 
         plugins = [
@@ -32,7 +34,7 @@
         shellAliases = {
           neofetch = "fastfetch";
 
-          update = "sudo nixos-rebuild switch --flake /etc/nixos/#default --impure --upgrade";
+          update = "nix flake update --flake /home/minze/minix && sudo nixos-rebuild switch --flake /home/minze/minix";
 
           zj = "zellij";
           zja = "zellij attach";

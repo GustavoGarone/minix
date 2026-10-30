@@ -7,7 +7,6 @@
         ripgrep
         ripgrep-all
         fd
-        zoxide
         bat
       ];
 
