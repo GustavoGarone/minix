@@ -26,7 +26,7 @@
       fileSystems."/".options = ["noatime"];
     };
     homeManager = {
-      inherit nix;
+      nix = {inherit (nix) gc;};
     };
   };
 }
