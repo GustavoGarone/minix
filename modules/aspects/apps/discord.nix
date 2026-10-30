@@ -19,8 +19,8 @@
             alwaysTrust.enable = true;
             anonymiseFileNames.enable = true;
             betterUploadButton.enable = true;
-            BlurNSFW.enable = true;
-            ClearURLs.enable = true;
+            blurNsfw.enable = true;
+            clearUrls.enable = true;
             copyEmojiMarkdown.enable = true;
             crashHandler.enable = true;
             fakeNitro.enable = true;
@@ -34,7 +34,7 @@
             noTypingAnimation.enable = true;
             openInApp.enable = true;
             pictureInPicture.enable = true;
-            PinDMs.enable = true;
+            pinDms.enable = true;
             typingTweaks.enable = true;
             validReply.enable = true;
             validUser.enable = true;
