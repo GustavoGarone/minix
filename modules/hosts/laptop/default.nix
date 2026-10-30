@@ -42,6 +42,8 @@
       apps.btop
       apps.zellij
       apps.yazi
+      apps.claude-code
+      apps.claude-desktop
 
       services.auto-cpufreq
       services.syncthing
