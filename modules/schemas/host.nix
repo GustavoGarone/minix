@@ -9,7 +9,7 @@
     config = {
       isLaptop = mkDefault false;
       keyboardLayout = mkDefault "br";
-      keyboardLayourVariant = mkDefault "";
+      keyboardLayoutVariant = mkDefault "";
       displays = mkDefault {};
       terminal = mkDefault "kitty";
       shell = mkDefault "fish";
@@ -46,7 +46,7 @@
               type = types.bool;
             };
             refresh = mkOption {
-              default = 60;
+              default = 60.0;
               type = types.float;
             };
             width = mkOption {type = types.int;};
