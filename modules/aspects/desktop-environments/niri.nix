@@ -95,8 +95,6 @@
           };
 
           spawn-at-startup = [
-            # niri for some reason does not auto-start the polkit agent.
-            {argv = ["${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"];}
             {argv = ["awww-daemon"];}
           ];
           prefer-no-csd = true;
