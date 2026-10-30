@@ -25,7 +25,7 @@
 
       fileSystems."/".options = ["noatime"];
     };
-    home-manager = {
+    homeManager = {
       inherit nix;
     };
   };
