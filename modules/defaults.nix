@@ -11,7 +11,7 @@
     nixos = {host}: {
       nixpkgs.config.allowUnfree = true;
 
-      networking.hostName = "den";
+      networking.hostName = host.hostName;
 
       time.timeZone = "America/Sao_Paulo";
 
