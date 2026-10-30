@@ -136,11 +136,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793322518,
-        "narHash": "sha256-kjSMLbQ1kZJ++3r04xOrVAut2bSMIsLTuzQMFijF0+8=",
+        "lastModified": 1793335352,
+        "narHash": "sha256-yfwqgCSBj7HoDvtcdnpR83u53w82MFK7P6Dr7JDqbBc=",
         "owner": "GustavoGarone",
         "repo": "claude-science-nix",
-        "rev": "c0ce96171a6c185e7156cb2b671194123fad7a31",
+        "rev": "a5e5611cfe184dd5db7ad61e1c01307977ab6052",
         "type": "github"
       },
       "original": {
