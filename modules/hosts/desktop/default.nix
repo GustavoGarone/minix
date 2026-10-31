@@ -44,6 +44,7 @@
       apps.claude-code
       apps.claude-desktop
       apps.claude-science
+      apps.griasdi
 
       services.syncthing
       services.sunshine

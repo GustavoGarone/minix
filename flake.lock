@@ -311,6 +311,26 @@
         "type": "github"
       }
     },
+    "griasdi-nix": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ]
+      },
+      "locked": {
+        "lastModified": 1793453888,
+        "narHash": "sha256-3o/Y2J1TP1Xhs5cCVYvlJbWsmCj0qWdzHcd8n6Cw3PI=",
+        "owner": "GustavoGarone",
+        "repo": "griasdi-nix",
+        "rev": "d42a6c514609b48fe81d316d276fc52bf1610f65",
+        "type": "github"
+      },
+      "original": {
+        "owner": "GustavoGarone",
+        "repo": "griasdi-nix",
+        "type": "github"
+      }
+    },
     "gsr-ui-nix": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -592,6 +612,7 @@
         "codex-cli-nix": "codex-cli-nix",
         "den": "den",
         "flake-parts": "flake-parts",
+        "griasdi-nix": "griasdi-nix",
         "gsr-ui-nix": "gsr-ui-nix",
         "home-manager": "home-manager",
         "import-tree": "import-tree",

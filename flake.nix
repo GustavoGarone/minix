@@ -23,6 +23,10 @@
       url = "github:GustavoGarone/claude-science-nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    griasdi-nix = {
+      url = "github:GustavoGarone/griasdi-nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     flake-parts = {
       inputs.nixpkgs-lib.follows = "nixpkgs-lib";
       url = "github:hercules-ci/flake-parts";

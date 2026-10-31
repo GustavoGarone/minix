@@ -44,6 +44,7 @@
       apps.yazi
       apps.claude-code
       apps.claude-desktop
+      apps.griasdi
 
       services.auto-cpufreq
       services.syncthing
