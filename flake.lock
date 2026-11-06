@@ -318,11 +318,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793548852,
-        "narHash": "sha256-TvkhAKjaqOqjdWGEJfmxmxOhJYKrkdT4HTT7AP2TILI=",
+        "lastModified": 1793977203,
+        "narHash": "sha256-9vryHJ/8Dpo5wHILoo91lghlquFkofk07ZfLGIbnQQY=",
         "owner": "GustavoGarone",
         "repo": "griasdi-nix",
-        "rev": "6665c4a369752ce0d9ac59f789f8b15c7eaf8a83",
+        "rev": "3f135170c610dce7772cda9f94c9589470a9a634",
         "type": "github"
       },
       "original": {
