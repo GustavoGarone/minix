@@ -412,11 +412,11 @@
     },
     "jetls-nix": {
       "locked": {
-        "lastModified": 1794678449,
-        "narHash": "sha256-8AsvPP517U6e3Qmo+rdN7cABQ9TraDuorASOZ79OCZc=",
+        "lastModified": 1794690012,
+        "narHash": "sha256-Vw1zx4Aqs49LUNnxaAqaLz+XSHfSGrbK1sLlYi3zhzM=",
         "owner": "GustavoGarone",
         "repo": "jetls-nix",
-        "rev": "cb1c5d520517ebe8c86c9519454b76b31e42996b",
+        "rev": "36a7b3cae8d1ea1fd07f74a48102c4c853a7639d",
         "type": "github"
       },
       "original": {
