@@ -410,6 +410,21 @@
         "type": "github"
       }
     },
+    "jetls-nix": {
+      "locked": {
+        "lastModified": 1794678449,
+        "narHash": "sha256-8AsvPP517U6e3Qmo+rdN7cABQ9TraDuorASOZ79OCZc=",
+        "owner": "GustavoGarone",
+        "repo": "jetls-nix",
+        "rev": "cb1c5d520517ebe8c86c9519454b76b31e42996b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "GustavoGarone",
+        "repo": "jetls-nix",
+        "type": "github"
+      }
+    },
     "niri": {
       "inputs": {
         "niri-stable": "niri-stable",
@@ -616,6 +631,7 @@
         "gsr-ui-nix": "gsr-ui-nix",
         "home-manager": "home-manager",
         "import-tree": "import-tree",
+        "jetls-nix": "jetls-nix",
         "niri": "niri",
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs",

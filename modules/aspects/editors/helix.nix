@@ -1,14 +1,35 @@
-{
+{inputs, ...}: let
+  # Public key of the jetls-nix Cachix cache. Set to null to stop using the
+  # cache (JETLS is then built locally).
+  jetlsCacheKey = "jetls-nix.cachix.org-1:NV1wdLix0eRK1BXK+kslibtvBJqKc4DQ7RBcMHByIgs=";
+in {
   den.aspects.editors.helix = {
-    nixos = {pkgs, ...}: {
+    nixos = {
+      pkgs,
+      lib,
+      ...
+    }: {
       environment.systemPackages = with pkgs; [
         helix
         nil
         alejandra
       ];
+
+      nix.settings = lib.mkIf (jetlsCacheKey != null) {
+        substituters = ["https://jetls-nix.cachix.org"];
+        trusted-public-keys = [jetlsCacheKey];
+      };
     };
 
-    homeManager = {pkgs, ...}: {
+    homeManager = {
+      pkgs,
+      lib,
+      ...
+    }: let
+      # JETLS, jlfmt and Julia built from the nixpkgs pin matching this
+      # system's NixOS release, so they come from the cache.
+      julia = inputs.jetls-nix.lib.packagesFor pkgs;
+    in {
       programs.helix = {
         enable = true;
         settings = {
@@ -72,7 +93,18 @@
         };
 
         languages = {
+          language-server.jetls = {
+            command = lib.getExe julia.jetls;
+            args = ["serve"];
+          };
           language = [
+            {
+              # Replaces the built-in LanguageServer.jl entry, which hangs on Julia 1.12+.
+              name = "julia";
+              language-servers = ["jetls"];
+              auto-format = true;
+              formatter.command = lib.getExe julia.jlfmt;
+            }
             {
               name = "nix";
               auto-format = true;

@@ -47,7 +47,9 @@ in {
         tidal-hifi
         proton-pass
         telegram-desktop
-        julia
+        # Same Julia that JETLS (Helix) is built with, so projects resolve
+        # against the version the language server runs on.
+        (inputs.jetls-nix.lib.packagesFor pkgs).julia
         libreoffice
         foliate
         inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default

@@ -27,6 +27,9 @@
       url = "github:GustavoGarone/griasdi-nix";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    # No inputs to follow on purpose: it pins its own nixpkgs per channel, and
+    # overriding them would change every hash and miss the Cachix cache.
+    jetls-nix.url = "github:GustavoGarone/jetls-nix";
     flake-parts = {
       inputs.nixpkgs-lib.follows = "nixpkgs-lib";
       url = "github:hercules-ci/flake-parts";
