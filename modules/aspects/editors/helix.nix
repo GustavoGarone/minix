@@ -96,6 +96,10 @@ in {
           language-server.jetls = {
             command = lib.getExe julia.jetls;
             args = ["serve"];
+            # Helix's default is 20s. JETLS loads the project's environment
+            # (e.g. Plots) during `initialize`, which took ~35s on a cold start;
+            # past the timeout Helix drops the server.
+            timeout = 120;
           };
           language = [
             {
