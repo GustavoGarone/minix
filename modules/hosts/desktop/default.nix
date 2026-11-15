@@ -23,6 +23,7 @@
 
       development.git
       development.direnv
+      development.julia
       development.postgresql
       editors.helix
       terminals.kitty

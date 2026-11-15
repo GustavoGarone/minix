@@ -30,6 +30,7 @@
 
       development.git
       development.direnv
+      development.julia
       editors.helix
       terminals.kitty
       shells.fish
