@@ -29,6 +29,9 @@ in {
       # JETLS, jlfmt and Julia built from the nixpkgs pin matching this
       # system's NixOS release, so they come from the cache.
       julia = inputs.jetls-nix.lib.packagesFor pkgs;
+      # R with the languageserver package in its library; Helix's built-in
+      # `r` server runs `R -e "languageserver::run()"`.
+      rLsp = pkgs.rWrapper.override {packages = [pkgs.rPackages.languageserver];};
     in {
       programs.helix = {
         enable = true;
@@ -101,7 +104,35 @@ in {
             # past the timeout Helix drops the server.
             timeout = 120;
           };
+          language-server.r = {
+            command = lib.getExe' rLsp "R";
+            args = ["--no-echo" "-e" "languageserver::run()"];
+          };
+          language-server.air = {
+            command = lib.getExe' pkgs.air-formatter "air";
+            args = ["language-server"];
+          };
           language = [
+            {
+              # Air formats (picking up the project's air.toml); languageserver
+              # does everything else, including lintr diagnostics.
+              name = "r";
+              # Root the LSP at the R package even inside a larger git repo:
+              # languageserver only feeds R/ functions to lintr's
+              # object_usage_linter when the root has a DESCRIPTION.
+              roots = ["DESCRIPTION"];
+              language-servers = [
+                {
+                  name = "air";
+                  only-features = ["format"];
+                }
+                {
+                  name = "r";
+                  except-features = ["format"];
+                }
+              ];
+              auto-format = true;
+            }
             {
               # Replaces the built-in LanguageServer.jl entry, which hangs on Julia 1.12+.
               name = "julia";
